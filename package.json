@@ -8,6 +8,17 @@
     "start": "webpack-dev-server --config webpack.development.config",
     "lint": "eslint ./src"
   },
+  "csscombConfig": {
+    "csscomb.formatOnSave": true,
+    "csscomb.preset": ".csscomb.json",
+    "csscomb.preset": {
+      "remove-empty-rulesets": true,
+      "always-semicolon": true
+    },
+    "csscomb.syntaxAssociations": {
+      "postcss": "scss"
+    }
+  },
   "author": "KSS",
   "devDependencies": {
     "autoprefixer": "^8.2.0",
