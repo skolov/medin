@@ -1,0 +1,24 @@
+extends layout/layout
+
+block variables
+  - var title = 'Верстка сайта';
+
+block header
+block content
+  +b.MAIN.main
+    .container
+      .row
+        .col-12.pt-8.pb-8
+          .col-12.mb-4
+            h2= title
+          .col-12
+            .content
+              ol
+                li
+                  a(href='UI-KIT.html' target='_blank') UI-KIT
+                    small - UI-KIT.html
+                li
+                  a(href='home.html' target='_blank') Главная страница
+                    small - home.html
+
+block footer

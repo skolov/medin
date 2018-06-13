@@ -1,0 +1,29 @@
+include ../../../node_modules/bemto.pug/bemto
+- set_bemto_settings({ modifier: '--' })
+- const stamp = Math.round(new Date().getTime() / 1000)
+
+include ../includes/data
+include ../includes/require
+include ../mixins/img
+include ../mixins/icon
+
+block variables
+
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    title #{title}
+    include ../includes/meta.pug
+    link(href=`css/app.css?stamp=${stamp}` rel='stylesheet')
+
+  body
+    block header
+      +b.HEADER.header
+        include ../components/header
+    block content
+    block footer
+      +b.FOOTER.footer
+        include ../components/footer
+    block scripts
+      script(src=`js/app.js?stamp=${stamp}`)
+      //- script(src=`js/assets.js?stamp=${stamp}`)

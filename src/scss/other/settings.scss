@@ -1,0 +1,51 @@
+body * {
+  box-sizing: border-box;
+  &:before,
+  &:after {
+    box-sizing: border-box;
+  }
+}
+
+header,
+footer {
+  flex: 0 0 auto;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+html {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: underline;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+p {
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

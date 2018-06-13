@@ -1,0 +1,60 @@
+@function rem ($px) {
+  @return $px / 16px+0rem;
+}
+
+@function vw($target, $viewport: 1920) {
+  $vw-context: ($viewport * 0.01) * 1px;
+  @return ($target / $vw-context) * 1vw;
+}
+
+@mixin hover-focus-active {
+  &:focus,
+  &:active,
+  &:hover {
+    @content;
+  }
+}
+
+@mixin hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+@mixin g-icon {
+  display: block;
+  white-space: nowrap;
+  text-decoration: none !important;
+  letter-spacing: normal;
+  text-transform: none;
+  word-wrap: normal;
+  font-family: "Material Icons";
+  font-size: 24px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  direction: ltr;
+  font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+}

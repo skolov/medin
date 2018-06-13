@@ -1,0 +1,16 @@
+{
+  "rules": {
+    "linebreak-style": 0,
+    "comma-dangle": "off",
+    "import/no-extraneous-dependencies": "off"
+  },
+  "extends": [
+    "airbnb-base"
+  ],
+  "globals": {
+    "$": true,
+    "jQuery": true,
+    "ymaps": true,
+    "BX": true
+  }
+}

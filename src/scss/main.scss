@@ -1,0 +1,15 @@
+//
+//Либы
+// @import '~normalize.css';
+// @import "~bootstrap/scss/bootstrap";
+@import "libs/bootstrap.scss";
+//
+//Разное
+@import "other/media";
+@import "other/font";
+@import "other/variables";
+@import "other/mixins";
+@import "other/settings";
+//
+//Общие блоки
+@import "blocks/**/*";

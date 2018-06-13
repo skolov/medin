@@ -1,0 +1,12 @@
+extends layout/layout
+
+block variables
+  - var title = 'Главная страница';
+
+block content
+  +b.MAIN.main
+    .container
+      .row
+        .col-12.pt-8.pb-8
+          .col-12
+            h1= title
