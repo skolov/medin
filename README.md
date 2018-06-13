@@ -18,7 +18,7 @@ _Template based on webpack, pug, scss, es6, postcss for multi page applications_
 
 1.  Clone or [download](http://git.sitesoft.ru/markup/frontend-template.git) project:
     ```console
-    git clone git@github.com:evgen3/mpa-frontend-template.git your-project-name
+    git clone http://git.sitesoft.ru/markup/frontend-template.git your-project-name
     ```
 1.  Enter in project folder and remove .git folder:
     ```console
