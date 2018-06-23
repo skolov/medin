@@ -15,7 +15,7 @@ html(lang="ru")
     title #{title}
     include ../includes/meta.pug
     link(href=`css/app.css?stamp=${stamp}` rel='stylesheet')
-
+    script(src=`js/icons.js?stamp=${stamp}`)
   body
     block header
       +b.HEADER.header
@@ -26,4 +26,4 @@ html(lang="ru")
         include ../components/footer
     block scripts
       script(src=`js/app.js?stamp=${stamp}`)
-      //- script(src=`js/assets.js?stamp=${stamp}`)
+

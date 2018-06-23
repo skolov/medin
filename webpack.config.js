@@ -32,7 +32,8 @@ module.exports = env => ({
   },
   entry: {
     app: './',
-    assets: './assets.js'
+    assets: './assets.js',
+    icons: './icons.js'
   },
   output: {
     filename: './js/[name].js',
