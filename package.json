@@ -11,10 +11,6 @@
   "csscombConfig": {
     "csscomb.formatOnSave": true,
     "csscomb.preset": ".csscomb.json",
-    "csscomb.preset": {
-      "remove-empty-rulesets": true,
-      "always-semicolon": true
-    },
     "csscomb.syntaxAssociations": {
       "postcss": "scss"
     }
