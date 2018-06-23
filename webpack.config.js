@@ -1,83 +1,82 @@
 const path = require('path');
 const fs = require('fs');
 const webpack = require('webpack');
-const globImporter = require('node-sass-glob-importer');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 
-const src = {
-  root: path.resolve(__dirname, 'src/')
-};
-Object.assign(src, {
-  img: path.resolve(src.root, 'img/'),
-  font: path.resolve(src.root, 'font/'),
-  ico: path.resolve(src.root, 'ico/'),
-  pug: path.resolve(src.root, 'pug/')
-});
+const globImporter = require('node-sass-glob-importer');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+const IfPlugin = require('if-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
 
-const dist = {
-  root: path.resolve(__dirname, 'dist/')
-};
+const src = path.resolve(__dirname, 'src/');
+const dist = path.resolve(__dirname, 'dist/');
 
-const config = {
-  context: src.root,
+const ico = path.resolve(src, 'ico/');
+const staticPath = path.resolve(src, 'static/');
+
+const pug = path.resolve(src, 'pug/');
+const pugGlobals = path.resolve(pug, 'data/global.json');
+
+module.exports = env => ({
+  context: src,
+  devtool: 'inline-source-map',
+  resolve: {
+    alias: {
+      '@': src
+    }
+  },
   entry: {
     app: './',
     assets: './assets.js'
   },
-  resolve: {
-    alias: {
-      Img: src.img,
-      Font: src.font
-    }
-  },
   output: {
     filename: './js/[name].js',
-    path: dist.root
+    path: dist
   },
   module: {
     rules: [{
         test: /\.js$/,
-        include: src.root,
+        exclude: /node_modules/,
         loader: 'babel-loader'
       },
       {
         test: /\.scss$/,
-        include: src.root,
-        use: ExtractTextPlugin.extract({
-          fallback: {
-            loader: 'style-loader',
+        use: [{
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: '../'
+            }
+          },
+          {
+            loader: 'css-loader',
             options: {
               sourceMap: true
             }
           },
-          publicPath: '../',
-          use: [{
-              loader: 'css-loader',
-              options: {
-                sourceMap: true
-              }
-            },
-            {
-              loader: 'postcss-loader',
-              options: {
-                sourceMap: true,
-                plugins: [autoprefixer]
-              }
-            },
-            {
-              loader: 'sass-loader',
-              options: {
-                importer: globImporter(),
-                sourceMap: true
-              }
+          {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: true,
+              plugins: [autoprefixer]
             }
-          ]
-        })
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              importer: globImporter(),
+              sourceMap: true
+            }
+          }
+        ]
       },
       {
         test: /\.(gif|png|jpe?g|svg|woff|eot|ttf|woff2)$/,
-        exclude: src.ico,
+        exclude: ico,
         use: [{
           loader: 'url-loader',
           options: {
@@ -88,23 +87,24 @@ const config = {
       },
       {
         test: /\.svg$/,
-        include: src.ico,
+        include: ico,
         use: ['svg-sprite-loader', 'svgo-loader']
       },
       {
         test: /\.pug$/,
+        include: pug,
         use: [{
             loader: 'file-loader',
             options: {
               name: '[path][name].html',
-              context: src.pug
+              context: pug
             }
           },
           'extract-loader',
           {
             loader: 'html-loader',
             options: {
-              interpolate: true
+              attrs: ['']
             }
           },
           {
@@ -113,9 +113,9 @@ const config = {
               pretty: true,
               exports: false,
               doctype: 'html',
-              basedir: src.pug,
+              basedir: pug,
               data: {
-                data: () => JSON.parse(fs.readFileSync(path.resolve(src.pug, 'data/global.json'), 'utf8'))
+                data: () => JSON.parse(fs.readFileSync(pugGlobals, 'utf8'))
               },
               filters: {
                 // filter for include json data as empty string
@@ -127,15 +127,43 @@ const config = {
       }
     ]
   },
+  optimization: {
+    minimizer: [
+      new UglifyJsPlugin({
+        cache: true,
+        parallel: true
+      }),
+      new OptimizeCSSAssetsPlugin({}),
+      new ImageminPlugin({
+        test: /\.(gif|png|jpe?g)$/
+      })
+    ]
+  },
   plugins: [
-    new ExtractTextPlugin({
+    new MiniCssExtractPlugin({
       filename: './css/app.css'
     }),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery'
-    })
+    }),
+    new CopyWebpackPlugin([{
+      from: staticPath,
+      to: dist
+    }]),
+    new CleanWebpackPlugin(dist),
+    new IfPlugin(
+      env === 'server',
+      new BrowserSyncPlugin({
+        host: 'localhost',
+        port: 3000,
+        ghostMode: false,
+        server: {
+          baseDir: [dist]
+        }
+      }, {
+        injectCss: true
+      })
+    )
   ]
-};
-
-module.exports = config;
+});

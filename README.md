@@ -43,8 +43,8 @@ _Template based on webpack, pug, scss, es6, postcss for multi page applications_
 In file pug/includes/require.pug located function, usage:
 
 ```pug
-img(src=`${require('Img/sample.jpg')}` srcset=`${require('Img/sample@2x.jpg')} 2x` alt='')
-.block(style=`background-image: url(${require('Img/sample.jpg')});`)
+img(src='upload/sample.jpg' srcset=`upload/sample@2x.jpg 2x` alt='')
+.block(style='background-image: url(upload/sample.jpg);')
 ```
 
 For short include in file pug/mixins/img.pug located mixin, usage:
@@ -53,4 +53,85 @@ For short include in file pug/mixins/img.pug located mixin, usage:
 +img('sample.jpg')(alt='image').some-class
 ```
 
-Attention! This mixin requires a picture in a double size (for srcset) and the link is already included `~Img/` directory.
+Attention! This mixin requires a picture in a double size (for srcset) and the link is already included `upload/` directory.
+
+### Include plugins/libraries
+
+#### CSS
+
+Install dependency (for example, swiper):
+
+```
+yarn add swiper
+```
+
+Import dependency in main.styl once:
+
+```
+@require '~swiper/dist/css/swiper.css'
+```
+
+Symbol `~` in styl points to a node_modules folder.
+
+#### JS
+
+##### jQuery plugins
+
+Install dependency (for example, sticky-kit):
+
+```
+yarn add sticky-kit
+```
+
+Import dependency in main.js once:
+
+```js
+import 'sticky-kit/dist/sticky-kit';
+```
+
+##### Other libraries
+
+Install dependency (for example, swiper):
+
+```
+yarn add swiper
+```
+
+Import in the file in which you need the dependency:
+
+```js
+import Swiper from 'swiper/dist/js/swiper';
+```
+
+### Alias @ in stylus and js
+
+@ in path points to src folder, with it you can create an absolute path.
+CSS:
+
+```
+src: url("~@/font/rouble-webfont.woff") format("woff")
+```
+
+JS:
+
+```
+import module from '@/js/module';
+```
+
+### Using svg-sprite
+
+Put the icon in `/ico` folder
+
+And add code in your template:
+
+```html
+<svg class="your-class" width="193" height="40">
+  <use xlink:href="#your-icon-file-name"></use>
+</svg>
+```
+
+Or you can use pug-mixin:
+
+```pug
++icon('your-icon-file-name')(width=193 height=40).your-class
+```
