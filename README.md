@@ -68,10 +68,10 @@ yarn add swiper
 Import dependency in main.styl once:
 
 ```
-@require '~swiper/dist/css/swiper.css'
+@import '~swiper/dist/css/swiper.css'
 ```
 
-Symbol `~` in styl points to a node_modules folder.
+Symbol `~` in points to a node_modules folder.
 
 #### JS
 
