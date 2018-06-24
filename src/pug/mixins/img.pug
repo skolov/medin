@@ -2,5 +2,5 @@ mixin img(path)
   - const arrPath = path.split('/');
   - const pathFolder = arrPath[0];
   - const pathFile = arrPath.slice(1).join('/');
-  - const url = pathFolder == 'img'? require(`@/img/${pathFile}`) : `upload/${pathFile}`;
+  - const url = require(`@/${pathFolder}/${pathFile}`);
   img(src=url)&attributes(attributes)

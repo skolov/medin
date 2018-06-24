@@ -4,7 +4,7 @@ const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
 
 const globImporter = require('node-sass-glob-importer');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+// const CopyWebpackPlugin = require('copy-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const IfPlugin = require('if-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -16,7 +16,9 @@ const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const src = path.resolve(__dirname, 'src/');
 const dist = path.resolve(__dirname, 'dist/');
 const ico = path.resolve(src, 'ico/');
-const staticPath = path.resolve(src, 'static/');
+const upload = path.resolve(src, 'upload/');
+const font = path.resolve(src, 'font/');
+// const staticPath = path.resolve(src, 'static/');
 
 const pug = path.resolve(src, 'pug/');
 const pugGlobals = path.resolve(pug, 'data/global.json');
@@ -26,7 +28,9 @@ module.exports = env => ({
   devtool: 'inline-source-map',
   resolve: {
     alias: {
-      '@': src
+      '@': src,
+      Img: path.resolve(src, 'img/'),
+      Upload: path.resolve(src, 'upload/'),
     }
   },
   entry: {
@@ -66,6 +70,9 @@ module.exports = env => ({
             }
           },
           {
+            loader: 'resolve-url-loader'
+          },
+          {
             loader: 'sass-loader',
             options: {
               importer: globImporter(),
@@ -73,17 +80,6 @@ module.exports = env => ({
             }
           }
         ]
-      },
-      {
-        test: /\.(gif|png|jpe?g|svg|woff|eot|ttf|woff2)$/,
-        exclude: ico,
-        use: [{
-          loader: 'url-loader',
-          options: {
-            limit: 8192,
-            name: '[path][name].[ext]'
-          }
-        }]
       },
       {
         test: /\.svg$/,
@@ -125,6 +121,45 @@ module.exports = env => ({
             }
           }
         ]
+      },
+      {
+        test: /\.(woff|eot|ttf|woff2|svg)$/,
+        include: font,
+        exclude: [ico, upload],
+        use: [{
+          loader: 'url-loader',
+          options: {
+            limit: 8192,
+            fallback: 'file-loader',
+            name: '[path][name].[ext]',
+            context: '',
+          }
+        }]
+      },
+      {
+        test: /\.(gif|png|jpe?g|svg)$/,
+        exclude: [ico, upload],
+        use: [{
+          loader: 'url-loader',
+          options: {
+            limit: 8192,
+            fallback: 'file-loader',
+            name: '[name].[ext]',
+            context: '',
+            outputPath: 'img/'
+          }
+        }]
+      },
+      {
+        test: /\.(gif|png|jpe?g|svg)$/,
+        include: upload,
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: '[path][name].[ext]',
+            context: '',
+          }
+        }]
       }
     ]
   },
@@ -148,10 +183,10 @@ module.exports = env => ({
       $: 'jquery',
       jQuery: 'jquery'
     }),
-    new CopyWebpackPlugin([{
-      from: staticPath,
-      to: dist
-    }]),
+    // new CopyWebpackPlugin([{
+    //   from: staticPath,
+    //   to: dist
+    // }]),
     new CleanWebpackPlugin(dist),
     new IfPlugin(
       env === 'server',

@@ -39,8 +39,8 @@ _Шаблон на основе webpack, pug, scss, es6, postcss для мног
 Пример:
 
 ```pug
-img(src='upload/sample.jpg' srcset=`upload/sample@2x.jpg 2x` alt='')
-.block(style='background-image: url(upload/sample.jpg);')
+img(src=require('@/upload/logo.png') alt='')
+.block(style=`background-image: url(${require('@/upload/logo.png')}); width: 300px; height: 300px; border: 1px solid red;`)
 ```
 
 Для сокращения можно использовать миксин pug/mixins/img.pug, пример:
