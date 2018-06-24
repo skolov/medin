@@ -7,15 +7,15 @@ _Шаблон на основе webpack, pug, scss, es6, postcss для мног
 ### Необходимый софт для PC
 
 1.  Установить [Node.js](https://nodejs.org/en/);
-1.  Установить [Yarn](https://yarnpkg.com/lang/en/) - менеджер пакетов, [usage](https://yarnpkg.com/en/docs/usage).
+2.  Установить [Yarn](https://yarnpkg.com/lang/en/) - менеджер пакетов, [usage](https://yarnpkg.com/en/docs/usage).
 
 ### Необходимые плагины для редактора или IDE
 
 1.  Установить editorconfig плагин для редактора ([PhpStorm](https://plugins.jetbrains.com/plugin/7294-editorconfig), [Sublime Text](https://packagecontrol.io/packages/EditorConfig), [Atom](https://atom.io/packages/linter-eslint), [VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)) - поддерживает единый стиль форматирования между различными редакторами и IDE;
 
-1.  Установить eslint плагин для редактора ([PhpStorm](https://www.jetbrains.com/help/phpstorm/eslint.html), [Sublime Text](https://packagecontrol.io/packages/ESLint), [Atom](https://atom.io/packages/editorconfig), [VS Code](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)) - проводит анализ качества вашего кода, написанного на любом выбранном стандарте JavaScript;
+2.  Установить eslint плагин для редактора ([PhpStorm](https://www.jetbrains.com/help/phpstorm/eslint.html), [Sublime Text](https://packagecontrol.io/packages/ESLint), [Atom](https://atom.io/packages/editorconfig), [VS Code](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)) - проводит анализ качества вашего кода, написанного на любом выбранном стандарте JavaScript;
 
-1.  Установить CSScomb плагин для редактора ([WebSite](http://csscomb.com)) - форматирует css код по установленным параметрам;
+3.  Установить CSScomb плагин для редактора ([WebSite](http://csscomb.com)) - форматирует css код по установленным параметрам;
 
 ## Запуск
 
@@ -23,15 +23,15 @@ _Шаблон на основе webpack, pug, scss, es6, postcss для мног
     ```в консоле ввести
     git clone http://git.sitesoft.ru/markup/frontend-template.git имя-проекта
     ```
-1.  Войти в папку проекта и удалить папку .git:
+2.  Войти в папку проекта и удалить папку .git:
     ```в консоле ввести
     cd имя-проекта И rm -rf .git
     ```
-1.  Установка зависимостей с помощью yarn:
+3.  Установка зависимостей с помощью yarn:
     ```в консоле ввести
     yarn
     ```
-1.  Использовать одну из команд для сборки или запуска проекта:
+4.  Использовать одну из команд для сборки или запуска проекта:
     - `yarn build` - сборка проекта для продакшена(минификация и оптимизация файлов);
     - `yarn watch` - сборка проекта для разработки, запуск слежения за файлами (добавление sourcemaps);
     - `yarn start` - сборка проекта для разработки, запуск слежения за файлами и локального сервера (автообновление страницы после изменения файлов проекта);
