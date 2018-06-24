@@ -49,8 +49,6 @@ img(src=require('@/upload/logo.png') alt='')
 +img('upload/sample.jpg')(alt='image').some-class
 ```
 
-Внимание! Этот миксин требует изображения в двойном размере (для srcset), внутри ссылка на папку `upload/`.
-
 ### Подключение плагинов/библиотек
 
 #### CSS
