@@ -65,7 +65,7 @@ Install dependency (for example, swiper):
 yarn add swiper
 ```
 
-Import dependency in main.styl once:
+Import dependency in main.scss once:
 
 ```
 @import '~swiper/dist/css/swiper.css'
