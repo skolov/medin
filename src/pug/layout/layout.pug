@@ -14,6 +14,7 @@ html(lang="ru")
     meta(charset="utf-8")
     title #{title}
     include ../includes/meta.pug
+    block stylesPage
     link(href=`css/app.css?stamp=${stamp}` rel='stylesheet')
     script(src=`js/icons.js?stamp=${stamp}`)
   body
@@ -24,6 +25,6 @@ html(lang="ru")
     block footer
       +b.FOOTER.footer
         include ../components/footer
-    block scripts
-      script(src=`js/app.js?stamp=${stamp}`)
+    block scriptsPage
+    script(src=`js/app.js?stamp=${stamp}`)
 
