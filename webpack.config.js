@@ -15,7 +15,6 @@ const ImageminPlugin = require('imagemin-webpack-plugin').default;
 
 const src = path.resolve(__dirname, 'src/');
 const dist = path.resolve(__dirname, 'dist/');
-
 const ico = path.resolve(src, 'ico/');
 const staticPath = path.resolve(src, 'static/');
 
@@ -105,7 +104,8 @@ module.exports = env => ({
           {
             loader: 'html-loader',
             options: {
-              attrs: ['']
+              attrs: [''],
+              interpolate: true
             }
           },
           {

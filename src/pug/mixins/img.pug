@@ -1,5 +1,6 @@
-mixin img(fileName)
-  - const url = `upload/${fileName}`
-  - const url2x = url.replace(/(\.\w+$)/, '@2x$1')
-
-  img(src=url srcset=`${url2x} 2x`)
+mixin img(path)
+  - const arrPath = path.split('/');
+  - const pathFolder = arrPath[0];
+  - const pathFile = arrPath.slice(1).join('/');
+  - const url = pathFolder == 'img'? require(`@/img/${pathFile}`) : `upload/${pathFile}`;
+  img(src=url)&attributes(attributes)
