@@ -46,7 +46,7 @@ img(src=require('@/upload/logo.png') alt='')
 Для сокращения можно использовать миксин pug/mixins/img.pug, пример:
 
 ```pug
-+img('sample.jpg')(alt='image').some-class
++img('upload/sample.jpg')(alt='image').some-class
 ```
 
 Внимание! Этот миксин требует изображения в двойном размере (для srcset), внутри ссылка на папку `upload/`.
@@ -118,7 +118,7 @@ import module from '@/js/module';
 </svg>
 ```
 
-Для сокращения можно использовать миксин pug/mixins/img.pug, пример::
+Для сокращения можно использовать миксин pug/mixins/img.pug, пример:
 
 ```pug
 +icon('your-icon-file-name')(width=193 height=40).your-class
