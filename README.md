@@ -112,7 +112,7 @@ import module from '@/js/module';
 
 Для подключения на страницу иконки использовать шаблон:
 
-```html или pug
+```html
 <svg class="your-class" width="193" height="40">
   <use xlink:href="#your-icon-file-name"></use>
 </svg>
