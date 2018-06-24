@@ -103,7 +103,7 @@ Import in the file in which you need the dependency:
 import Swiper from 'swiper/dist/js/swiper';
 ```
 
-### Alias @ in stylus and js
+### Alias @ in scss and js
 
 @ in path points to src folder, with it you can create an absolute path.
 CSS:
