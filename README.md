@@ -1,111 +1,104 @@
-# frontend template
+# Шаблон фронтенд проектов
 
-_Template based on webpack, pug, scss, es6, postcss for multi page applications_
+_Шаблон на основе webpack, pug, scss, es6, postcss для многостраничных приложений_
 
-## Prepare
+## Подготовка
 
-### Required
+### Необходимый софт для PC
 
-1.  Install or update [Node.js](https://nodejs.org/en/);
-1.  Install [Yarn](https://yarnpkg.com/lang/en/) - fast package manager (like a npm), [usage](https://yarnpkg.com/en/docs/usage).
+1.  Установить [Node.js](https://nodejs.org/en/);
+1.  Установить [Yarn](https://yarnpkg.com/lang/en/) - менеджер пакетов, [usage](https://yarnpkg.com/en/docs/usage).
 
-### Optional
+### Необходимые плагины для редактора или IDE
 
-1.  Install editorconfig plugin for your editor ([PhpStorm](https://plugins.jetbrains.com/plugin/7294-editorconfig), [Sublime Text](https://packagecontrol.io/packages/EditorConfig), [Atom](https://atom.io/packages/linter-eslint), [VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)) - consistent coding style between different editors and IDEs;
-1.  Install eslint plugin for your editor ([PhpStorm](https://www.jetbrains.com/help/phpstorm/eslint.html), [Sublime Text](https://packagecontrol.io/packages/ESLint), [Atom](https://atom.io/packages/editorconfig), [VS Code](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)) - the pluggable linting utility for JavaScript.
+1.  Установить editorconfig плагин для редактора ([PhpStorm](https://plugins.jetbrains.com/plugin/7294-editorconfig), [Sublime Text](https://packagecontrol.io/packages/EditorConfig), [Atom](https://atom.io/packages/linter-eslint), [VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)) - поддерживает единый стиль форматирования между различными редакторами и IDE;
 
-1.  Install CSScomb plugin for your editor ([WebSite](http://csscomb.com)) - Makes your code beautiful;
+1.  Установить eslint плагин для редактора ([PhpStorm](https://www.jetbrains.com/help/phpstorm/eslint.html), [Sublime Text](https://packagecontrol.io/packages/ESLint), [Atom](https://atom.io/packages/editorconfig), [VS Code](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)) - проводит анализ качества вашего кода, написанного на любом выбранном стандарте JavaScript;
 
-## Start
+1.  Установить CSScomb плагин для редактора ([WebSite](http://csscomb.com)) - форматирует css код по установленным параметрам;
 
-1.  Clone or [download](http://git.sitesoft.ru/markup/frontend-template.git) project:
-    ```console
-    git clone http://git.sitesoft.ru/markup/frontend-template.git your-project-name
+## Запуск
+
+1.  Клонируйте или [скачайте](http://git.sitesoft.ru/markup/frontend-template.git) проект:
+    ```в консоле ввести
+    git clone http://git.sitesoft.ru/markup/frontend-template.git имя-проекта
     ```
-1.  Enter in project folder and remove .git folder:
-    ```console
-    cd your-project-name && rm -rf .git
+1.  Войти в папку проекта и удалить папку .git:
+    ```в консоле ввести
+    cd имя-проекта И rm -rf .git
     ```
-1.  Install dependencies with yarn:
-    ```console
+1.  Установка зависимостей с помощью yarn:
+    ```в консоле ввести
     yarn
     ```
-1.  Use build commands:
-    - `yarn build` - build project for production (includes UglifyJSPlugin, cssnano);
-    - `yarn watch` - build and start watching for development (includes sourcemaps);
-    - `yarn start` - build, watch and local server for development (includes reload on change files);
-    - `yarn lint` - lint js code in src folder with airbnb rules.
+1.  Использовать одну из команд для сборки или запуска проекта:
+    - `yarn build` - сборка проекта для продакшена(минификация и оптимизация файлов);
+    - `yarn watch` - сборка проекта для разработки, запуск слежения за файлами (добавление sourcemaps);
+    - `yarn start` - сборка проекта для разработки, запуск слежения за файлами и локального сервера (автообновление страницы после изменения файлов проекта);
+    - `yarn lint` - проверка js кода в папке src на соответствие правилам airbnb.
 
-## Cookbook
+## Инструкции по разработке
 
-### Include image in template
+### Подключение изображений
 
-In file pug/includes/require.pug located function, usage:
+Пример:
 
 ```pug
 img(src='upload/sample.jpg' srcset=`upload/sample@2x.jpg 2x` alt='')
 .block(style='background-image: url(upload/sample.jpg);')
 ```
 
-For short include in file pug/mixins/img.pug located mixin, usage:
+Для сокращения можно использовать миксин pug/mixins/img.pug, пример:
 
 ```pug
 +img('sample.jpg')(alt='image').some-class
 ```
 
-Attention! This mixin requires a picture in a double size (for srcset) and the link is already included `upload/` directory.
+Внимание! Этот миксин требует изображения в двойном размере (для srcset), внутри ссылка на папку `upload/`.
 
-### Include plugins/libraries
+### Подключение плагинов/библиотек
 
 #### CSS
 
-Install dependency (for example, swiper):
+Установка плагина/библиотеки (например, swiper)::
 
 ```
 yarn add swiper
 ```
 
-Import dependency in main.scss once:
+Подключаем плагин/библиотеку в main.scss:
 
 ```
 @import '~swiper/dist/css/swiper.css'
 ```
 
-Symbol `~` in points to a node_modules folder.
+Символ ' ~ ' указывает на папку node_modules.
 
 #### JS
 
-##### jQuery plugins
+##### jQuery плагин/библиотека
 
-Install dependency (for example, sticky-kit):
+Устанавливаем плагин/библиотеку (например, sticky-kit):
 
 ```
 yarn add sticky-kit
 ```
 
-Import dependency in main.js once:
+Подключаем плагин/библиотеку в main.js:
 
 ```js
 import 'sticky-kit/dist/sticky-kit';
 ```
 
-##### Other libraries
-
-Install dependency (for example, swiper):
-
-```
-yarn add swiper
-```
-
-Import in the file in which you need the dependency:
+Подключение файла, в котором требуется зависимость:
 
 ```js
 import Swiper from 'swiper/dist/js/swiper';
 ```
 
-### Alias @ in scss and js
+### Сокращение пути через @ в файлах scss and js
 
-@ in path points to src folder, with it you can create an absolute path.
+@ в пути к файлу указывает на папку src, с его помощью можно создать абсолютный путь.
 CSS:
 
 ```
@@ -118,19 +111,19 @@ JS:
 import module from '@/js/module';
 ```
 
-### Using svg-sprite
+### Использование svg-спрайта
 
-Put the icon in `/ico` folder
+Все svg иконки необходимо поместить в папку `/ico`
 
-And add code in your template:
+Для подключения на страницу иконки использовать шаблон:
 
-```html
+```html или pug
 <svg class="your-class" width="193" height="40">
   <use xlink:href="#your-icon-file-name"></use>
 </svg>
 ```
 
-Or you can use pug-mixin:
+Для сокращения можно использовать миксин pug/mixins/img.pug, пример::
 
 ```pug
 +icon('your-icon-file-name')(width=193 height=40).your-class
