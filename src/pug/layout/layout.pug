@@ -9,22 +9,25 @@ include ../mixins/icon
 
 block variables
 
+doctype html
 html(lang="ru")
   head
     meta(charset="utf-8")
     title #{title}
     include ../includes/meta.pug
+    // Уникальные стили только для этой страницы - начало
     block stylesPage
+    // Уникальные стили только для этой страницы - конец
     link(href=`css/app.css?stamp=${stamp}` rel='stylesheet')
     script(src=`js/icons.js?stamp=${stamp}`)
   body
     block header
-      +b.HEADER.header
-        include ../components/header
+      include ../../blocks/header/header
     block content
     block footer
-      +b.FOOTER.footer
-        include ../components/footer
+      include ../../blocks/footer/footer
+    // Уникальные скрипты только для этой страницы - начало
     block scriptsPage
+    // Уникальные скрипты только для этой страницы - конец
     script(src=`js/app.js?stamp=${stamp}`)
 
