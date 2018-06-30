@@ -2,6 +2,7 @@
   "name": "frontend-template",
   "version": "1.0",
   "description": "Template based on webpack, pug, scss, es6, postcss for multi page applications",
+  "license": "ISC",
   "scripts": {
     "build": "webpack --mode production",
     "watch": "webpack --watch --mode development",
@@ -55,9 +56,29 @@
     "webpack-cli": "^2.0.13"
   },
   "dependencies": {
+    "air-datepicker": "^2.2.3",
     "bootstrap": "^4.1.1",
+    "devbridge-autocomplete": "https://github.com/devbridge/jQuery-Autocomplete",
+    "dropzone": "^5.4.0",
+    "fancybox": "2.1.7",
+    "fontfaceobserver": "^2.0.13",
+    "highlight.js": "^9.12.0",
+    "inputmask": "^4.0.0",
+    "jcf": "^1.2.3",
     "jquery": "^3.3.1",
+    "jquery-gray": "^1.6.0",
+    "jquery.tabulator": "^3.5.3",
+    "malihu-custom-scrollbar-plugin": "^3.1.5",
+    "masonry-layout": "^4.2.1",
+    "mediaelement": "^4.2.9",
+    "most-visible": "^1.2.1",
     "normalize.css": "^8.0.0",
-    "popper.js": "^1.14.3"
+    "owl.carousel": "^2.3.4",
+    "perfect-scrollbar": "^1.4.0",
+    "popper.js": "^1.14.3",
+    "readmore-js": "^2.1.0",
+    "slick-carousel": "^1.8.1",
+    "sticky-sidebar": "^3.3.1",
+    "texttailor.js": "https://github.com/jpntex/TextTailor.js/"
   }
 }

@@ -16,6 +16,10 @@
   dependencies:
     "@types/babel-types" "*"
 
+"@types/jquery@^2.0.32":
+  version "2.0.49"
+  resolved "https://registry.yarnpkg.com/@types/jquery/-/jquery-2.0.49.tgz#95bd7064caebf65bde10429dff491a1aea05b67d"
+
 "@webassemblyjs/ast@1.5.12":
   version "1.5.12"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.5.12.tgz#a9acbcb3f25333c4edfa1fdf3186b1ccf64e6664"
@@ -209,9 +213,22 @@ adjust-sourcemap-loader@^1.1.0:
     object-path "^0.9.2"
     regex-parser "^2.2.9"
 
+adler-32@~1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/adler-32/-/adler-32-1.1.0.tgz#03551a5c7f0edfbd4fc8fa12a6814978eab651c3"
+  dependencies:
+    exit-on-epipe "~1.0.1"
+    printj "~1.1.0"
+
 after@0.8.2:
   version "0.8.2"
   resolved "https://registry.yarnpkg.com/after/-/after-0.8.2.tgz#fedb394f9f0e02aa9768e702bda23b505fae7e1f"
+
+air-datepicker@^2.2.3:
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/air-datepicker/-/air-datepicker-2.2.3.tgz#9dbb6bc6bc8c9d9db380475091370dad82c2f787"
+  dependencies:
+    jquery ">=2.0.0 <4.0.0"
 
 ajv-keywords@^2.1.0:
   version "2.1.1"
@@ -1651,6 +1668,10 @@ bemto.pug@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/bemto.pug/-/bemto.pug-2.1.0.tgz#1dbb22f588085b71861258cc4cd696c4b56b53f3"
 
+best-globals@~0.10.4:
+  version "0.10.4"
+  resolved "https://registry.yarnpkg.com/best-globals/-/best-globals-0.10.4.tgz#13477cc643e638451350818b1c505b177d96f275"
+
 better-assert@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/better-assert/-/better-assert-1.0.2.tgz#40866b9e1b9e0b55b481894311e68faffaebc522"
@@ -2134,6 +2155,13 @@ center-align@^0.1.1:
     align-text "^0.1.3"
     lazy-cache "^1.0.3"
 
+cfb@~1.0.0:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/cfb/-/cfb-1.0.7.tgz#ccb615eb1bb0a039e7829ab0b2ad4ea564fbaa78"
+  dependencies:
+    commander "^2.14.1"
+    printj "~1.1.2"
+
 chalk@^1.0.0, chalk@^1.1.1, chalk@^1.1.3:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-1.1.3.tgz#a8115c55e4a702fe4d150abd3872822a7e09fc98"
@@ -2410,6 +2438,26 @@ code-point-at@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/code-point-at/-/code-point-at-1.1.0.tgz#0d070b4d043a5bea33a2f1a40e2edb3d9a4ccf77"
 
+codenautas-xlsx@0.11.12:
+  version "0.11.12"
+  resolved "https://registry.yarnpkg.com/codenautas-xlsx/-/codenautas-xlsx-0.11.12.tgz#25b32d76ac3516494ee870622c0112fe4678f616"
+  dependencies:
+    adler-32 "~1.1.0"
+    cfb "~1.0.0"
+    codepage "~1.11.0"
+    commander "~2.11.0"
+    crc-32 "~1.1.1"
+    exit-on-epipe "~1.0.1"
+    ssf "~0.10.1"
+
+codepage@~1.11.0:
+  version "1.11.1"
+  resolved "https://registry.yarnpkg.com/codepage/-/codepage-1.11.1.tgz#86472397ea5b2cdbb07b77016a512477a3cb8823"
+  dependencies:
+    commander "~2.11.0"
+    exit-on-epipe "~1.0.1"
+    voc "~1.0.0"
+
 collection-visit@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/collection-visit/-/collection-visit-1.0.0.tgz#4bc0373c164bc3291b4d368c829cf1a80a59dca0"
@@ -2474,6 +2522,14 @@ combined-stream@^1.0.5, combined-stream@~1.0.5:
 commander@2.15.x, commander@^2.2.0, commander@^2.9.0, commander@~2.15.0:
   version "2.15.1"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.15.1.tgz#df46e867d0fc2aec66a34662b406a9ccafff5b0f"
+
+commander@^2.14.1:
+  version "2.16.0"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-2.16.0.tgz#f16390593996ceb4f3eeb020b31d78528f7f8a50"
+
+commander@~2.11.0:
+  version "2.11.0"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-2.11.0.tgz#157152fd1e7a6c8d98a5b715cf376df928004563"
 
 commander@~2.14.1:
   version "2.14.1"
@@ -2635,6 +2691,13 @@ cosmiconfig@^2.1.0, cosmiconfig@^2.1.1:
     os-homedir "^1.0.1"
     parse-json "^2.2.0"
     require-from-string "^1.1.0"
+
+crc-32@~1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/crc-32/-/crc-32-1.1.1.tgz#5d739d5e4c6e352ad8304d73223d483fe55adb8d"
+  dependencies:
+    exit-on-epipe "~1.0.1"
+    printj "~1.1.0"
 
 create-ecdh@^4.0.0:
   version "4.0.0"
@@ -3121,6 +3184,10 @@ des.js@^1.0.0:
     inherits "^2.0.1"
     minimalistic-assert "^1.0.0"
 
+desandro-matches-selector@^2.0.0:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/desandro-matches-selector/-/desandro-matches-selector-2.0.2.tgz#717beed4dc13e7d8f3762f707a6d58a6774218e1"
+
 destroy@~1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/destroy/-/destroy-1.0.4.tgz#978857442c44749e4206613e37946205826abd80"
@@ -3146,6 +3213,13 @@ detect-libc@^1.0.2:
 dev-ip@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/dev-ip/-/dev-ip-1.0.1.tgz#a76a3ed1855be7a012bb8ac16cb80f3c00dc28f0"
+
+"devbridge-autocomplete@https://github.com/devbridge/jQuery-Autocomplete":
+  version "1.4.8"
+  resolved "https://github.com/devbridge/jQuery-Autocomplete#174df1c93a4dc4cc5ef07cccd9d9ebb691ee7df2"
+  dependencies:
+    "@types/jquery" "^2.0.32"
+    jquery ">=1.7"
 
 diff@^3.3.1, diff@^3.5.0:
   version "3.5.0"
@@ -3271,6 +3345,10 @@ download@^6.2.2:
     make-dir "^1.0.0"
     p-event "^1.0.0"
     pify "^3.0.0"
+
+dropzone@^5.4.0:
+  version "5.4.0"
+  resolved "https://registry.yarnpkg.com/dropzone/-/dropzone-5.4.0.tgz#3290c07f59b189eb5a11e99a58c9b2adae5acfec"
 
 duplexer2@0.0.2:
   version "0.0.2"
@@ -3640,6 +3718,10 @@ etag@^1.8.1, etag@~1.8.1:
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/etag/-/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
 
+ev-emitter@^1.0.0:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/ev-emitter/-/ev-emitter-1.1.1.tgz#8f18b0ce5c76a5d18017f71c0a795c65b9138f2a"
+
 eventemitter3@1.x.x:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-1.2.0.tgz#1c86991d816ad1e504750e73874224ecf3bec508"
@@ -3705,6 +3787,10 @@ executable@^1.0.0:
 exit-hook@^1.0.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/exit-hook/-/exit-hook-1.1.1.tgz#f05ca233b48c05d54fff07765df8507e95c02ff8"
+
+exit-on-epipe@~1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/exit-on-epipe/-/exit-on-epipe-1.0.1.tgz#0bdd92e87d5285d267daa8171d0eb06159689692"
 
 expand-brackets@^0.1.4:
   version "0.1.5"
@@ -3815,6 +3901,10 @@ fancy-log@^1.1.0:
     color-support "^1.1.3"
     time-stamp "^1.0.0"
 
+fancybox@2.1.7:
+  version "2.1.7"
+  resolved "https://registry.yarnpkg.com/fancybox/-/fancybox-2.1.7.tgz#c820d284167c1f3dff6595ef55d1c26d9151ba52"
+
 fast-deep-equal@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-1.1.0.tgz#c053477817c86b51daa853c81e059b733d023614"
@@ -3863,6 +3953,10 @@ file-loader@^1.1.11:
   dependencies:
     loader-utils "^1.0.2"
     schema-utils "^0.4.5"
+
+file-saver@~1.3.3:
+  version "1.3.8"
+  resolved "https://registry.yarnpkg.com/file-saver/-/file-saver-1.3.8.tgz#e68a30c7cb044e2fb362b428469feb291c2e09d8"
 
 file-type@5.2.0, file-type@^5.2.0:
   version "5.2.0"
@@ -3990,6 +4084,12 @@ first-chunk-stream@^2.0.0:
   dependencies:
     readable-stream "^2.0.2"
 
+fizzy-ui-utils@^2.0.0:
+  version "2.0.7"
+  resolved "https://registry.yarnpkg.com/fizzy-ui-utils/-/fizzy-ui-utils-2.0.7.tgz#7df45dcc4eb374a08b65d39bb9a4beedf7330505"
+  dependencies:
+    desandro-matches-selector "^2.0.0"
+
 flat-cache@^1.2.1:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/flat-cache/-/flat-cache-1.3.0.tgz#d3030b32b38154f4e3b7e9c709f490f7ef97c481"
@@ -4019,6 +4119,10 @@ follow-redirects@^1.2.5:
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.5.0.tgz#234f49cf770b7f35b40e790f636ceba0c3a0ab77"
   dependencies:
     debug "^3.1.0"
+
+fontfaceobserver@^2.0.13:
+  version "2.0.13"
+  resolved "https://registry.yarnpkg.com/fontfaceobserver/-/fontfaceobserver-2.0.13.tgz#47adbb343261eda98cb44db2152196ff124d3221"
 
 for-in@^0.1.3:
   version "0.1.8"
@@ -4055,6 +4159,10 @@ form-data@~2.1.1:
     asynckit "^0.4.0"
     combined-stream "^1.0.5"
     mime-types "^2.1.12"
+
+frac@~1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/frac/-/frac-1.1.2.tgz#3d74f7f6478c88a1b5020306d747dc6313c74d0b"
 
 fragment-cache@^0.2.1:
   version "0.2.1"
@@ -4187,6 +4295,10 @@ get-proxy@^2.0.0:
   resolved "https://registry.yarnpkg.com/get-proxy/-/get-proxy-2.1.0.tgz#349f2b4d91d44c4d4d4e9cba2ad90143fac5ef93"
   dependencies:
     npm-conf "^1.1.0"
+
+get-size@^2.0.2:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/get-size/-/get-size-2.0.3.tgz#54a1d0256b20ea7ac646516756202769941ad2ef"
 
 get-stdin@^4.0.1:
   version "4.0.1"
@@ -4656,6 +4768,10 @@ header-case@^1.0.0:
     no-case "^2.2.0"
     upper-case "^1.1.3"
 
+highlight.js@^9.12.0:
+  version "9.12.0"
+  resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-9.12.0.tgz#e6d9dbe57cbefe60751f02af336195870c90c01e"
+
 hmac-drbg@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/hmac-drbg/-/hmac-drbg-1.0.1.tgz#d2745701025a6c775a6c545793ed502fc0c649a1"
@@ -4944,6 +5060,10 @@ inherits@2.0.1:
 ini@^1.3.4, ini@~1.3.0:
   version "1.3.5"
   resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.5.tgz#eee25f56db1c9ec6085e0c22778083f596abf927"
+
+inputmask@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/inputmask/-/inputmask-4.0.0.tgz#98d7da2c08208a474badc692c1122edb5580247b"
 
 inquirer@^3.0.6, inquirer@^3.3.0:
   version "3.3.0"
@@ -5434,6 +5554,10 @@ isurl@^1.0.0-alpha5:
     has-to-string-tag-x "^1.2.0"
     is-object "^1.0.1"
 
+jcf@^1.2.3:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/jcf/-/jcf-1.2.3.tgz#9d64dc3c3d0b628e634a96ae28dfe1056ed670dc"
+
 jpegtran-bin@^3.0.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/jpegtran-bin/-/jpegtran-bin-3.2.0.tgz#f60ecf4ae999c0bdad2e9fbcdf2b6f0981e7a29b"
@@ -5442,9 +5566,25 @@ jpegtran-bin@^3.0.0:
     bin-wrapper "^3.0.0"
     logalot "^2.0.0"
 
-jquery@^3.3.1:
+jquery-gray@^1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/jquery-gray/-/jquery-gray-1.6.0.tgz#b951f1cb7f3451b58aab405d06ddddb3b7be8f28"
+
+jquery-mousewheel@>=3.0.6:
+  version "3.1.13"
+  resolved "https://registry.yarnpkg.com/jquery-mousewheel/-/jquery-mousewheel-3.1.13.tgz#06f0335f16e353a695e7206bf50503cb523a6ee5"
+
+jquery.tabulator@^3.5.3:
+  version "3.5.3"
+  resolved "https://registry.yarnpkg.com/jquery.tabulator/-/jquery.tabulator-3.5.3.tgz#f9b93638ded225a78936de39868ce934a2604516"
+
+jquery@>=1.7, jquery@>=1.8.3, "jquery@>=2.0.0 <4.0.0", jquery@^3.3.1:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.3.1.tgz#958ce29e81c9790f31be7792df5d4d95fc57fbca"
+
+jquery@~2.1.4:
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-2.1.4.tgz#228bde698a0c61431dc2630a6a154f15890d2317"
 
 js-base64@^2.1.8:
   version "2.4.5"
@@ -5457,6 +5597,10 @@ js-base64@^2.1.9:
 js-stringify@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/js-stringify/-/js-stringify-1.0.2.tgz#1736fddfd9724f28a3682adc6230ae7e4e9679db"
+
+js-to-html@~0.9.3:
+  version "0.9.3"
+  resolved "https://registry.yarnpkg.com/js-to-html/-/js-to-html-0.9.3.tgz#919d3788788e844ea87cc322ad3ce4b805eeeb8b"
 
 js-tokens@^3.0.0, js-tokens@^3.0.2:
   version "3.0.2"
@@ -5670,6 +5814,10 @@ levn@^0.3.0, levn@~0.3.0:
   dependencies:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
+
+like-ar@~0.2.2:
+  version "0.2.7"
+  resolved "https://registry.yarnpkg.com/like-ar/-/like-ar-0.2.7.tgz#5b19381f46afc257645b8e8fb3e56952fa8f576f"
 
 limiter@^1.0.5:
   version "1.1.3"
@@ -6056,6 +6204,12 @@ make-dir@^1.0.0, make-dir@^1.1.0:
   dependencies:
     pify "^3.0.0"
 
+malihu-custom-scrollbar-plugin@^3.1.5:
+  version "3.1.5"
+  resolved "https://registry.yarnpkg.com/malihu-custom-scrollbar-plugin/-/malihu-custom-scrollbar-plugin-3.1.5.tgz#310cecc5e59415a1c29e9dfb5d2b6e01d66a29ef"
+  dependencies:
+    jquery-mousewheel ">=3.0.6"
+
 mamacro@^0.0.3:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/mamacro/-/mamacro-0.0.3.tgz#ad2c9576197c9f1abf308d0787865bd975a3f3e4"
@@ -6073,6 +6227,13 @@ map-visit@^1.0.0:
   resolved "https://registry.yarnpkg.com/map-visit/-/map-visit-1.0.0.tgz#ecdca8f13144e660f1b5bd41f12f3479d98dfb8f"
   dependencies:
     object-visit "^1.0.0"
+
+masonry-layout@^4.2.1:
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/masonry-layout/-/masonry-layout-4.2.1.tgz#1c878b85a88866ba6b39b9bd0e162348aed7ce13"
+  dependencies:
+    get-size "^2.0.2"
+    outlayer "^2.1.0"
 
 math-expression-evaluator@^1.2.14:
   version "1.2.17"
@@ -6343,6 +6504,10 @@ mixin-object@^2.0.1:
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
   dependencies:
     minimist "0.0.8"
+
+most-visible@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/most-visible/-/most-visible-1.2.1.tgz#c5f7e51e764b9c84fe9bd2872212938c88e14a24"
 
 move-concurrently@^1.0.1:
   version "1.0.1"
@@ -6859,6 +7024,20 @@ osenv@0, osenv@^0.1.4:
     os-homedir "^1.0.0"
     os-tmpdir "^1.0.0"
 
+outlayer@^2.1.0:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/outlayer/-/outlayer-2.1.1.tgz#29863b6de10ea5dadfffcadfa0d728907387e9a2"
+  dependencies:
+    ev-emitter "^1.0.0"
+    fizzy-ui-utils "^2.0.0"
+    get-size "^2.0.2"
+
+owl.carousel@^2.3.4:
+  version "2.3.4"
+  resolved "https://registry.yarnpkg.com/owl.carousel/-/owl.carousel-2.3.4.tgz#6c53dc8d24304b790e4f27a1dc4a655e973ccdc9"
+  dependencies:
+    jquery ">=1.8.3"
+
 p-cancelable@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/p-cancelable/-/p-cancelable-0.3.0.tgz#b9e123800bcebb7ac13a479be195b507b98d30fa"
@@ -7097,6 +7276,10 @@ pbkdf2@^3.0.3:
 pend@~1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/pend/-/pend-1.2.0.tgz#7a57eb550a6783f9115331fcf4663d5c8e007a50"
+
+perfect-scrollbar@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/perfect-scrollbar/-/perfect-scrollbar-1.4.0.tgz#5d014ef9775e1f43058a1dbae9ed1daf0e7091f1"
 
 performance-now@^0.2.0:
   version "0.2.0"
@@ -7515,6 +7698,10 @@ pretty-bytes@^4.0.2:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/pretty-bytes/-/pretty-bytes-4.0.2.tgz#b2bf82e7350d65c6c33aa95aaa5a4f6327f61cd9"
 
+printj@~1.1.0, printj@~1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/printj/-/printj-1.1.2.tgz#d90deb2975a8b9f600fb3a1c94e3f4c53c78a222"
+
 private@^0.1.6, private@^0.1.7, private@~0.1.5:
   version "0.1.8"
   resolved "https://registry.yarnpkg.com/private/-/private-0.1.8.tgz#2381edb3689f7a53d653190060fcf822d2f368ff"
@@ -7893,6 +8080,12 @@ readdirp@^2.0.0:
     minimatch "^3.0.2"
     readable-stream "^2.0.2"
     set-immediate-shim "^1.0.1"
+
+readmore-js@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/readmore-js/-/readmore-js-2.1.0.tgz#0cf33cfc6f1f06af2a58e8e4fc4704db8c77fb57"
+  dependencies:
+    jquery "~2.1.4"
 
 recast@^0.12.5:
   version "0.12.9"
@@ -8534,6 +8727,10 @@ slice-ansi@1.0.0:
   dependencies:
     is-fullwidth-code-point "^2.0.0"
 
+slick-carousel@^1.8.1:
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/slick-carousel/-/slick-carousel-1.8.1.tgz#a4bfb29014887bb66ce528b90bd0cda262cc8f8d"
+
 slide@^1.1.5:
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/slide/-/slide-1.1.6.tgz#56eb027d65b4d2dce6cb2e2d32c4d4afc9e1d707"
@@ -8734,6 +8931,12 @@ squeak@^1.0.0:
     console-stream "^0.1.1"
     lpad-align "^1.0.1"
 
+ssf@~0.10.1:
+  version "0.10.2"
+  resolved "https://registry.yarnpkg.com/ssf/-/ssf-0.10.2.tgz#65b2b4fcdfd967bc8e8383a41349009893115976"
+  dependencies:
+    frac "~1.1.2"
+
 sshpk@^1.7.0:
   version "1.14.1"
   resolved "https://registry.yarnpkg.com/sshpk/-/sshpk-1.14.1.tgz#130f5975eddad963f1d56f92b9ac6c51fa9f83eb"
@@ -8786,6 +8989,10 @@ stdout-stream@^1.4.0:
   resolved "https://registry.yarnpkg.com/stdout-stream/-/stdout-stream-1.4.0.tgz#a2c7c8587e54d9427ea9edb3ac3f2cd522df378b"
   dependencies:
     readable-stream "^2.0.1"
+
+sticky-sidebar@^3.3.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/sticky-sidebar/-/sticky-sidebar-3.3.1.tgz#142bf6b64c2b416e4b707ebf8f09b8b5a5043877"
 
 stream-browserify@^2.0.1:
   version "2.0.1"
@@ -9098,6 +9305,16 @@ table@4.0.2:
     slice-ansi "1.0.0"
     string-width "^2.1.1"
 
+tabulator@^0.2.38:
+  version "0.2.38"
+  resolved "https://registry.yarnpkg.com/tabulator/-/tabulator-0.2.38.tgz#ff3f5febc1f4605aa32913ee8eb8e90d0ed0e47d"
+  dependencies:
+    best-globals "~0.10.4"
+    codenautas-xlsx "0.11.12"
+    file-saver "~1.3.3"
+    js-to-html "~0.9.3"
+    like-ar "~0.2.2"
+
 tapable@^0.1.8:
   version "0.1.10"
   resolved "https://registry.yarnpkg.com/tapable/-/tapable-0.1.10.tgz#29c35707c2b70e50d07482b5d202e8ed446dafd4"
@@ -9183,6 +9400,10 @@ text-table@^0.2.0, text-table@~0.2.0:
 textextensions@2:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/textextensions/-/textextensions-2.2.0.tgz#38ac676151285b658654581987a0ce1a4490d286"
+
+"texttailor.js@https://github.com/jpntex/TextTailor.js/":
+  version "0.1.0"
+  resolved "https://github.com/jpntex/TextTailor.js/#47f296063442282f0de8cfc5bafc6d1b37faaff2"
 
 tfunk@^3.0.1:
   version "3.1.0"
@@ -9732,6 +9953,10 @@ vm-browserify@0.0.4:
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-0.0.4.tgz#5d7ea45bbef9e4a6ff65f95438e0a87c357d5a73"
   dependencies:
     indexof "0.0.1"
+
+voc@~1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/voc/-/voc-1.0.0.tgz#5465c0ce11d0881f7d8e36d8ca587043f33a25ae"
 
 void-elements@^2.0.1:
   version "2.0.1"

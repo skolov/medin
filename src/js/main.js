@@ -1,1 +1,2 @@
-import './vendor';
+import '../vendors/vendor';
+$(function() {});

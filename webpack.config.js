@@ -50,7 +50,7 @@ module.exports = env => ({
         loader: 'babel-loader'
       },
       {
-        test: /\.scss$/,
+        test: /\.s?css$/,
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
@@ -127,7 +127,6 @@ module.exports = env => ({
       },
       {
         test: /\.(woff|eot|ttf|woff2|svg)$/,
-        include: font,
         exclude: [ico, upload],
         use: [
           {
@@ -135,7 +134,7 @@ module.exports = env => ({
             options: {
               limit: 8192,
               fallback: 'file-loader',
-              name: '[path][name].[ext]',
+              name: '[name].[ext]',
               context: '',
               outputPath: 'font/'
             }

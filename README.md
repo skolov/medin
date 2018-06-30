@@ -121,3 +121,28 @@ import module from '@/js/module';
 ```pug
 +icon('your-icon-file-name')(width=193 height=40).your-class
 ```
+
+## Плагины/Библиотеки используемые в шаблоне
+
+1.  Normalize [GitHub](https://github.com/necolas/normalize.css/), [Сайт](https://necolas.github.io/normalize.css/);
+2.  Bootstrap [GitHub](https://github.com/twbs/bootstrap), [Сайт](https://getbootstrap.com);
+3.  Air-datepicker [GitHub](https://github.com/t1m0n/air-datepicker), [Сайт](http://t1m0n.name/air-datepicker/docs/index-ru.html);
+4.  Dropzonejs [GitHub](https://github.com/enyo/dropzone/), [Сайт](http://www.dropzonejs.com);
+5.  FancyBox [GitHub](https://github.com/fancyapps/fancyBox), [Сайт](http://fancyapps.com/fancybox/);
+6.  Highlightjs [GitHub](https://github.com/isagalaev/highlight.js), [Сайт](http://highlightjs.readthedocs.io/en/latest/);
+7.  Jcf [GitHub](https://github.com/w3co/jcf), [Сайт](https://www.psd2html.com/js-custom-forms/#demo/);
+8.  mCustomScrollbar [GitHub](https://github.com/malihu/malihu-custom-scrollbar-plugin), [Сайт](http://manos.malihu.gr/jquery-custom-content-scroller/#get-started-section);
+9.  Perfect-scrollbar [GitHub](https://github.com/utatti/perfect-scrollbar), [Сайт](http://utatti.github.io/perfect-scrollbar/);
+10. Devbridge-autocomplete [GitHub](https://github.com/devbridge/jQuery-Autocomplete), [Сайт](https://www.devbridge.com/sourcery/components/jquery-autocomplete/);
+11. Masonry [GitHub](https://github.com/desandro/masonry), [Сайт](https://masonry.desandro.com);
+12. Mediaelementjs [GitHub](https://github.com/mediaelement/mediaelement), [Сайт](http://www.mediaelementjs.com);
+13. OwlCarousel2 [GitHub](https://github.com/OwlCarousel2/OwlCarousel2), [Сайт](https://owlcarousel2.github.io/OwlCarousel2/);
+14. Slick [GitHub](https://github.com/kenwheeler/slick/), [Сайт](http://kenwheeler.github.io/slick);
+15. Tabulator [GitHub](https://github.com/olifolkerd/tabulator), [Сайт](http://tabulator.info);
+16. Inputmask [GitHub](https://github.com/RobinHerbots/Inputmask), [Сайт](http://robinherbots.github.io/Inputmask/);
+17. Most Visible [GitHub](https://github.com/andyexeter/most-visible);
+18. Readmore.js [GitHub](https://github.com/jedfoster/Readmore.js), [Сайт](http://jedfoster.com/Readmore.js/);
+19. TextTailor.js [GitHub](https://github.com/jpntex/TextTailor.js/), [Сайт](http://jpntex.github.io/TextTailor.js/);
+20. Sticky-sidebar [GitHub](https://github.com/abouolia/sticky-sidebar), [Сайт](https://abouolia.github.io/sticky-sidebar/);
+21. Gray [GitHub](https://github.com/karlhorky/gray), [Сайт](https://work.karlhorky.com/gray/);
+22. Fontfaceobserver [GitHub](https://github.com/bramstein/fontfaceobserver), [Сайт](https://fontfaceobserver.com);
