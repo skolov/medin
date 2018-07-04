@@ -1,3 +1,4 @@
 import '../vendors/vendor';
+import './blocks';
 
-$(function() {});
+$(function () {});
