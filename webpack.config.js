@@ -28,9 +28,7 @@ module.exports = env => ({
   devtool: 'inline-source-map',
   resolve: {
     alias: {
-      '@': src,
-      Img: path.resolve(src, 'img/'),
-      Upload: path.resolve(src, 'upload/')
+      '@': src
     }
   },
   entry: {
@@ -166,8 +164,14 @@ module.exports = env => ({
   optimization: {
     minimizer: [
       new UglifyJsPlugin({
+        uglifyOptions: {
+          output: {
+            comments: false
+          }
+        },
         cache: true,
-        parallel: true
+        parallel: true,
+
       }),
       new OptimizeCSSAssetsPlugin({}),
       new ImageminPlugin({
