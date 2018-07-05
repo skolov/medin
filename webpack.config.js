@@ -43,16 +43,14 @@ module.exports = env => ({
     path: dist
   },
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
       },
       {
         test: /\.s?css$/,
-        use: [
-          {
+        use: [{
             loader: MiniCssExtractPlugin.loader,
             options: {
               publicPath: '../'
@@ -91,8 +89,7 @@ module.exports = env => ({
       {
         test: /\.pug$/,
         include: pug,
-        use: [
-          {
+        use: [{
             loader: 'file-loader',
             options: {
               name: '[name].html',
@@ -128,47 +125,41 @@ module.exports = env => ({
       {
         test: /\.(woff|eot|ttf|woff2|svg)$/,
         exclude: [ico, upload],
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 8192,
-              fallback: 'file-loader',
-              name: '[name].[ext]',
-              context: '',
-              outputPath: 'font/'
-            }
+        use: [{
+          loader: 'url-loader',
+          options: {
+            limit: 8192,
+            fallback: 'file-loader',
+            name: '[name].[ext]',
+            context: '',
+            outputPath: 'font/'
           }
-        ]
+        }]
       },
       {
         test: /\.(gif|png|jpe?g|svg)$/,
         exclude: [ico, upload, font],
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 8192,
-              fallback: 'file-loader',
-              name: '[name].[ext]',
-              context: '',
-              outputPath: 'img/'
-            }
+        use: [{
+          loader: 'url-loader',
+          options: {
+            limit: 8192,
+            fallback: 'file-loader',
+            name: '[name].[ext]',
+            context: '',
+            outputPath: 'img/'
           }
-        ]
+        }]
       },
       {
         test: /\.(gif|png|jpe?g|svg)$/,
         include: upload,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[path][name].[ext]',
-              context: ''
-            }
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: '[path][name].[ext]',
+            context: ''
           }
-        ]
+        }]
       }
     ]
   },
@@ -199,19 +190,16 @@ module.exports = env => ({
     new CleanWebpackPlugin(dist),
     new IfPlugin(
       env === 'server',
-      new BrowserSyncPlugin(
-        {
-          host: 'localhost',
-          port: 3000,
-          ghostMode: false,
-          server: {
-            baseDir: [dist]
-          }
-        },
-        {
-          injectCss: true
+      new BrowserSyncPlugin({
+        host: 'localhost',
+        port: 3000,
+        ghostMode: false,
+        server: {
+          baseDir: [dist]
         }
-      )
+      }, {
+        injectCss: true
+      })
     )
   ]
 });
