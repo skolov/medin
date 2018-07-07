@@ -146,3 +146,4 @@ import module from '@/js/module';
 20. Sticky-sidebar [GitHub](https://github.com/abouolia/sticky-sidebar), [Сайт](https://abouolia.github.io/sticky-sidebar/);
 21. Gray [GitHub](https://github.com/karlhorky/gray), [Сайт](https://work.karlhorky.com/gray/);
 22. Fontfaceobserver [GitHub](https://github.com/bramstein/fontfaceobserver), [Сайт](https://fontfaceobserver.com);
+23. Flag-icon-css [GitHub](https://github.com/lipis/flag-icon-css), [Сайт](http://flag-icon-css.lip.is);

@@ -140,3 +140,8 @@
 // Проверка загрузки шрифтов
 // Подключаем Scripts
 // import 'babel-loader!fontfaceobserver';
+//
+// Flag-icon-css - https://github.com/lipis/flag-icon-css (http://flag-icon-css.lip.is)
+// Коллекция всех флагов стран в SVG
+// Подключаем Styles
+// import 'flag-icon-css/css/flag-icon.css';
