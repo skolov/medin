@@ -1,3 +1,5 @@
+/* eslint-disable */
+//
 const path = require('path');
 const fs = require('fs');
 const webpack = require('webpack');
@@ -17,7 +19,6 @@ const src = path.resolve(__dirname, 'src/');
 const dist = path.resolve(__dirname, 'dist/');
 const ico = path.resolve(src, 'ico/');
 const upload = path.resolve(src, 'upload/');
-const font = path.resolve(src, 'font/');
 // const staticPath = path.resolve(src, 'static/');
 
 const pug = path.resolve(src, 'pug/');
@@ -121,8 +122,7 @@ module.exports = env => ({
         ]
       },
       {
-        test: /\.(woff|eot|ttf|woff2|svg)$/,
-        exclude: [ico, upload],
+        test: /\.(woff|eot|ttf|woff2)$/,
         use: [{
           loader: 'url-loader',
           options: {
@@ -135,10 +135,24 @@ module.exports = env => ({
         }]
       },
       {
-        test: /\.(gif|png|jpe?g|svg)$/,
-        exclude: [ico, upload, font],
+        test: /\.(gif|png|jpe?g)$/,
+        exclude: [ico, upload],
         use: [{
           loader: 'url-loader',
+          options: {
+            limit: 8192,
+            fallback: 'file-loader',
+            name: '[name].[ext]',
+            context: '',
+            outputPath: 'img/'
+          }
+        }]
+      },
+      {
+        test: /\.svg$/,
+        exclude: [ico, upload],
+        use: [{
+          loader: 'svg-url-loader',
           options: {
             limit: 8192,
             fallback: 'file-loader',
@@ -171,7 +185,6 @@ module.exports = env => ({
         },
         cache: true,
         parallel: true,
-
       }),
       new OptimizeCSSAssetsPlugin({}),
       new ImageminPlugin({
