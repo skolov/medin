@@ -1,7 +1,7 @@
 {
-  "name": "frontend-template",
+  "name": "Шаблон фронтенд проектов",
   "version": "1.0",
-  "description": "Template based on webpack, pug, scss, es6, postcss for multi page applications",
+  "description": "Шаблон на основе webpack, pug, scss, es6, postcss для многостраничных приложений",
   "license": "ISC",
   "scripts": {
     "build": "webpack --mode production",
@@ -11,12 +11,12 @@
   },
   "csscombConfig": {
     "csscomb.formatOnSave": true,
-    "csscomb.preset": ".csscomb.json",
+    "csscomb.preset": "csscomb.json",
     "csscomb.syntaxAssociations": {
       "postcss": "scss"
     }
   },
-  "author": "KSS",
+  "author": "Компания Сайтсофт",
   "devDependencies": {
     "autoprefixer": "^8.2.0",
     "babel-core": "7.0.0-beta.3",
