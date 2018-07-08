@@ -51,58 +51,30 @@ img(src=require('@/upload/logo.png') alt='')
 
 ### Подключение плагинов/библиотек
 
-#### CSS
-
-Установка плагина/библиотеки (например, swiper)::
+Установка плагина/библиотеки (например, slick-carousel):
 
 ```
-yarn add swiper
+yarn add slick-carousel
 ```
 
-Подключаем плагин/библиотеку в main.scss:
+Подключаем плагин/библиотеку в vendor/vendor.js:
+
+Подключаем Scripts
 
 ```
-@import '~swiper/dist/css/swiper.css'
+import 'babel-loader!slick-carousel';
 ```
 
-Символ ' ~ ' указывает на папку node_modules.
-
-#### JS
-
-##### jQuery плагин/библиотека
-
-Устанавливаем плагин/библиотеку (например, sticky-kit):
+Подключаем Styles
 
 ```
-yarn add sticky-kit
+import 'slick-carousel/slick/slick.scss';
+import 'slick-carousel/slick/slick-theme.scss';
 ```
 
-Подключаем плагин/библиотеку в main.js:
-
-```js
-import 'sticky-kit/dist/sticky-kit';
-```
-
-Подключение файла, в котором требуется зависимость:
-
-```js
-import Swiper from 'swiper/dist/js/swiper';
-```
-
-### Сокращение пути через @ в файлах scss and js
-
+Приставка babel-loader! ставится если подключаемую библиотеку необходимо обработать babel-ем.
+Символ ' ~ ' в начале пути указывает на папку node_modules.
 @ в пути к файлу указывает на папку src, с его помощью можно создать абсолютный путь.
-CSS:
-
-```
-src: url("~@/font/rouble-webfont.woff") format("woff")
-```
-
-JS:
-
-```
-import module from '@/js/module';
-```
 
 ### Использование svg-спрайта
 
