@@ -4,8 +4,8 @@ _Шаблон на основе webpack, pug, scss, es6, postcss для мног
 
 ## Действия перед созданием нового проекта
 
-1.  Проверить дизайн на соответствие требованиям [Требования к макетам дизайна KSS](https://docs.google.com/document/d/1DrQdRloEhhvfxCblvDui9ENhLd6nLcTH1HaYMp0Z8fQ/edit?usp=sharing);
-2.  Прочитать правила front-end проектов KSS и следовать им [Правила front-end проектов KSS](https://docs.google.com/document/d/1t-LmUuQL9MmftZR6g3pngkdRn2TTGBfkLYivJuvIutY/edit?usp=sharing);
+1.  Проверить дизайн на соответствие требованиям [Требования к макетам дизайна KSS](https://docs.google.com/document/d/1DrQdRloEhhvfxCblvDui9ENhLd6nLcTH1HaYMp0Z8fQ/edit?usp=sharing)
+2.  Прочитать правила front-end проектов KSS и следовать им [Правила front-end проектов KSS](https://docs.google.com/document/d/1t-LmUuQL9MmftZR6g3pngkdRn2TTGBfkLYivJuvIutY/edit?usp=sharing)
 
 ## Подготовка
 
@@ -78,6 +78,8 @@ import 'slick-carousel/slick/slick-theme.scss';
 ```
 
 Приставка babel-loader! ставится если подключаемую библиотеку необходимо обработать babel-ем.
+
+Приставка expose-loader! ставится если подключаемая библиотека должна быть доступна глобально.
 
 Символ ' ~ ' в начале пути указывает на папку node_modules.
 
