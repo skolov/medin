@@ -195,8 +195,8 @@ module.exports = env => ({
       filename: './css/app.css'
     }),
     new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery'
+      $: 'expose-loader?$!jquery',
+      jQuery: 'expose-loader?$!jquery'
     }),
     // new CopyWebpackPlugin([{
     //   from: staticPath,

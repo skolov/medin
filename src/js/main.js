@@ -1,4 +1,7 @@
 import '../vendors/vendor';
 import './blocks';
 
-$(function () {});
+$(function () {
+
+  $('body').css('border', '1px solid red')
+});
