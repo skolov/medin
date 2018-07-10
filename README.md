@@ -2,12 +2,17 @@
 
 _Шаблон на основе webpack, pug, scss, es6, postcss для многостраничных приложений_
 
+## Действия перед созданием нового проекта
+
+1.  Проверить дизайн на соответствие требованиям [Требования к макетам дизайна KSS](https://docs.google.com/document/d/1DrQdRloEhhvfxCblvDui9ENhLd6nLcTH1HaYMp0Z8fQ/edit?usp=sharing);
+2.  Прочитать правила front-end проектов KSS и следовать им [Правила front-end проектов KSS](https://docs.google.com/document/d/1t-LmUuQL9MmftZR6g3pngkdRn2TTGBfkLYivJuvIutY/edit?usp=sharing);
+
 ## Подготовка
 
 ### Необходимый софт для PC
 
 1.  Установить [Node.js](https://nodejs.org/en/);
-2.  Установить [Yarn](https://yarnpkg.com/lang/en/) - менеджер пакетов, [usage](https://yarnpkg.com/en/docs/usage).
+2.  Установить [Yarn](https://yarnpkg.com/lang/en/) - менеджер пакетов, [usage](https://yarnpkg.com/en/docs/usage);
 
 ### Необходимые плагины для редактора или IDE
 
