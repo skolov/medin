@@ -4,6 +4,8 @@ const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
 
 const globImporter = require('node-sass-glob-importer');
+// const WebpackMessages = require('webpack-messages');
+const FormatMessagesWebpackPlugin = require('format-messages-webpack-plugin');
 // const CopyWebpackPlugin = require('copy-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const IfPlugin = require('if-webpack-plugin');
@@ -23,6 +25,7 @@ const pug = path.resolve(src, 'pug/');
 const pugGlobals = path.resolve(pug, 'data/global.json');
 
 module.exports = env => ({
+  stats: 'none',
   context: src,
   devtool: 'inline-source-map',
   resolve: {
@@ -215,6 +218,11 @@ module.exports = env => ({
       }, {
         injectCss: true
       })
-    )
+    ),
+    // new WebpackMessages({
+    //   name: 'client',
+    //   logger: str => console.log(`>> ${str}`)
+    // })
+    new FormatMessagesWebpackPlugin()
   ]
 });
