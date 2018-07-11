@@ -36,7 +36,6 @@
     "expose-loader": "^0.7.5",
     "extract-loader": "^2.0.1",
     "file-loader": "^1.1.11",
-    "format-messages-webpack-plugin": "^1.1.0",
     "html-loader": "^0.5.5",
     "if-webpack-plugin": "^1.0.5",
     "imagemin-webpack-plugin": "^2.1.1",

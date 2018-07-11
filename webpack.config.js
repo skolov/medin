@@ -2,10 +2,9 @@ const path = require('path');
 const fs = require('fs');
 const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
-
+const package = require('./package.json');
 const globImporter = require('node-sass-glob-importer');
-// const WebpackMessages = require('webpack-messages');
-const FormatMessagesWebpackPlugin = require('format-messages-webpack-plugin');
+const WebpackMessages = require('webpack-messages');
 // const CopyWebpackPlugin = require('copy-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const IfPlugin = require('if-webpack-plugin');
@@ -46,7 +45,7 @@ module.exports = env => ({
     rules: [{
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel-loader'
+        // loader: 'babel-loader'
       },
       {
         test: /\.s?css$/,
@@ -219,10 +218,9 @@ module.exports = env => ({
         injectCss: true
       })
     ),
-    // new WebpackMessages({
-    //   name: 'client',
-    //   logger: str => console.log(`>> ${str}`)
-    // })
-    new FormatMessagesWebpackPlugin()
+    new WebpackMessages({
+      name: package.name,
+      logger: str => console.log(`>> ${str}`)
+    })
   ]
 });
