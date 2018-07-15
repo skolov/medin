@@ -152,7 +152,8 @@ module.exports = env => ({
         test: /\.svg$/,
         exclude: [ico, upload],
         use: [{
-          loader: 'svg-url-loader',
+          // loader: 'svg-url-loader',
+          loader: 'url-loader',
           options: {
             limit: 8192,
             fallback: 'file-loader',
