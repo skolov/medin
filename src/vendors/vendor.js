@@ -52,6 +52,8 @@
 // Кастомный скролл - 1 вариант
 // Подключаем Scripts
 // import 'babel-loader!malihu-custom-scrollbar-plugin';
+// Плагин, нужный чтобы передавать скролл колеса мыши в mCustomScrollbar
+// import 'jquery-mousewheel';
 // Подключаем Styles
 // import 'malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css';
 //
