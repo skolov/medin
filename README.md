@@ -9,10 +9,11 @@ _Шаблон на основе webpack, pug, scss, es6, postcss для мног
 
 ## Подготовка
 
-### Необходимый софт для PC
+### Необходимые зависимости
 
 1.  Установить [Node.js](https://nodejs.org/en/);
 2.  Установить [Yarn](https://yarnpkg.com/lang/en/) - менеджер пакетов, [usage](https://yarnpkg.com/en/docs/usage);
+3.  Установить [JSON Server](https://github.com/typicode/json-server) - фейковый REST API, [инструкция](https://ruseller.com/lessons.php?rub=32&id=2842);
 
 ### Необходимые плагины для редактора или IDE
 
