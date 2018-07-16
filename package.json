@@ -81,6 +81,7 @@
     "owl.carousel": "^2.3.4",
     "perfect-scrollbar": "^1.4.0",
     "popper.js": "^1.14.3",
+    "rangy": "^1.3.0",
     "readmore-js": "^2.1.0",
     "slick-carousel": "^1.8.1",
     "sticky-sidebar": "^3.3.1",

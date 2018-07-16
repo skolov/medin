@@ -147,3 +147,12 @@
 // Коллекция всех флагов стран в SVG
 // Подключаем Styles
 // import 'flag-icon-css/css/flag-icon.css';
+//
+// Rangy - https://github.com/timdown/rangy
+// Различные методы работы с выделенным текстом
+// Подключаем Scripts
+// import 'expose-loader?rangy!rangy'
+// import 'rangy/lib/rangy-classapplier.js';
+// import 'rangy/lib/rangy-selectionsaverestore.js';
+// import 'rangy/lib/rangy-serializer.js';
+// import 'rangy/lib/rangy-textrange.js';

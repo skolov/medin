@@ -129,3 +129,4 @@ import 'slick-carousel/slick/slick-theme.scss';
 21. Gray [GitHub](https://github.com/karlhorky/gray), [Сайт](https://work.karlhorky.com/gray/);
 22. Fontfaceobserver [GitHub](https://github.com/bramstein/fontfaceobserver), [Сайт](https://fontfaceobserver.com);
 23. Flag-icon-css [GitHub](https://github.com/lipis/flag-icon-css), [Сайт](http://flag-icon-css.lip.is);
+24. Rangy [GitHub](https://github.com/timdown/rangy)
