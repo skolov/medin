@@ -296,10 +296,6 @@ amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
 
-ansi-colors@^2.0.1:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/ansi-colors/-/ansi-colors-2.0.2.tgz#1a95e0163c461846d44cbdea97bb2ac1aa35f1b2"
-
 ansi-escapes@^1.0.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/ansi-escapes/-/ansi-escapes-1.4.0.tgz#d3a8a83b319aa67793662b13e761c7911422306e"
@@ -5325,6 +5321,10 @@ kleur@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/kleur/-/kleur-1.0.1.tgz#6b64a4a42c7226fc0319fec35904f824ad945f7e"
 
+kleur@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/kleur/-/kleur-2.0.1.tgz#7cc64b0d188d0dcbc98bdcdfdda2cc10619ddce8"
+
 last-call-webpack-plugin@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/last-call-webpack-plugin/-/last-call-webpack-plugin-3.0.0.tgz#9742df0e10e3cf46e5c0381c2de90d3a7a2d7555"
@@ -9416,12 +9416,12 @@ webpack-log@^1.1.2:
     loglevelnext "^1.0.1"
     uuid "^3.1.0"
 
-webpack-messages@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/webpack-messages/-/webpack-messages-2.0.0.tgz#882577360937f1f25f8e389428d8b3744b72d037"
+webpack-messages@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/webpack-messages/-/webpack-messages-2.0.1.tgz#f25f13d5a3664a12f9822a4e874aa0df7bf8960a"
   dependencies:
-    ansi-colors "^2.0.1"
     console-clear "^1.0.0"
+    kleur "^2.0.1"
     webpack-format-messages "^2.0.0"
 
 webpack-sources@^1.0.1, webpack-sources@^1.1.0:
