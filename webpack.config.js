@@ -130,7 +130,7 @@ module.exports = env => ({
             fallback: 'file-loader',
             name: '[name].[ext]',
             context: '',
-            outputPath: 'font/'
+            outputPath: 'fonts/'
           }
         }]
       },
