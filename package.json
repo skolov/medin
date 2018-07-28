@@ -3,20 +3,13 @@
   "version": "1.0",
   "description": "Шаблон на основе webpack, pug, scss, es6, postcss для многостраничных приложений",
   "license": "ISC",
+  "author": "Компания Сайтсофт",
   "scripts": {
     "build": "webpack --mode production",
     "watch": "webpack --watch --mode development",
     "start": "webpack --watch --mode development --env server",
     "lint": "eslint ./src"
   },
-  "csscombConfig": {
-    "csscomb.formatOnSave": true,
-    "csscomb.preset": "csscomb.json",
-    "csscomb.syntaxAssociations": {
-      "postcss": "scss"
-    }
-  },
-  "author": "Компания Сайтсофт",
   "devDependencies": {
     "autoprefixer": "^8.2.0",
     "babel-core": "^6.26.3",
