@@ -6,5 +6,8 @@
 @import "other/mixins";
 @import "other/settings";
 //
+//Либы
+@import "../vendors/custom/smart-grid/smart-grid";
+//
 //Общие блоки
 @import "../blocks/**/*.scss";
