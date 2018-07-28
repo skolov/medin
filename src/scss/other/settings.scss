@@ -1,13 +1,11 @@
 body * {
   box-sizing: border-box;
-  &:before,
-  &:after {
+  &:before, &:after {
     box-sizing: border-box;
   }
 }
 
-header,
-footer {
+header, footer {
   flex: 0 0 auto;
 }
 
@@ -23,13 +21,14 @@ html {
 }
 
 body {
-  position: relative;
   display: flex;
+  position: relative;
   flex-direction: column;
   box-sizing: border-box;
   min-height: 100vh;
-  font-family: "Roboto", sans-serif;
+  font-family: "GOST UI 2", Helvetica, Tahoma, sans-serif;
   line-height: 1.4;
+
   -webkit-font-smoothing: antialiased;
 }
 

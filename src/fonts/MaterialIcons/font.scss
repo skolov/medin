@@ -31,27 +31,3 @@
   /* Support for Firefox. */
   -moz-osx-font-smoothing: grayscale;
 }
-
-@mixin material-icons {
-  /* Preferred icon size */
-  display: inline-block;
-  font-family: "Material Icons";
-  font-size: 24px;
-  font-weight: normal;
-  font-style: normal;
-  line-height: 1;
-  letter-spacing: normal;
-  text-transform: none;
-  /* Support for Safari and Chrome. */
-  text-rendering: optimizeLegibility;
-  white-space: nowrap;
-  word-wrap: normal;
-  direction: ltr;
-  /* Support for IE. */
-
-  font-feature-settings: "liga";
-  /* Support for all WebKit browsers. */
-  -webkit-font-smoothing: antialiased;
-  /* Support for Firefox. */
-  -moz-osx-font-smoothing: grayscale;
-}

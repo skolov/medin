@@ -35,7 +35,8 @@ module.exports = env => ({
   entry: {
     app: './',
     assets: './assets.js',
-    icons: './icons.js'
+    icons: './icons.js',
+    fonts: './fonts.js'
   },
   output: {
     filename: './js/[name].js',
@@ -195,7 +196,7 @@ module.exports = env => ({
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: './css/app.css'
+      filename: "./css/[name].css",
     }),
     new webpack.ProvidePlugin({
       $: 'expose-loader?$!jquery',

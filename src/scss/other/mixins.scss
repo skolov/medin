@@ -7,40 +7,38 @@
   @return ($target / $vw-context) * 1vw;
 }
 
-@mixin hover-focus-active {
-  &:focus,
-  &:active,
-  &:hover {
-    @content;
-  }
-}
-
 @mixin hidden {
   position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
   width: 1px;
   height: 1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
   margin: -1px;
   padding: 0;
   border: 0;
 }
 
-@mixin g-icon {
-  display: block;
-  white-space: nowrap;
-  text-decoration: none !important;
-  letter-spacing: normal;
-  text-transform: none;
-  word-wrap: normal;
+@mixin material-icons {
+  /* Preferred icon size */
+  display: inline-block;
   font-family: "Material Icons";
   font-size: 24px;
   font-weight: normal;
   font-style: normal;
   line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  white-space: nowrap;
+  word-wrap: normal;
   direction: ltr;
+  /* Support for IE. */
+
   font-feature-settings: "liga";
+  /* Support for all WebKit browsers. */
   -webkit-font-smoothing: antialiased;
+  /* Support for Firefox. */
   -moz-osx-font-smoothing: grayscale;
 }
 
