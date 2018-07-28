@@ -156,3 +156,9 @@
 // import 'rangy/lib/rangy-selectionsaverestore.js';
 // import 'rangy/lib/rangy-serializer.js';
 // import 'rangy/lib/rangy-textrange.js';
+//
+// Tooltipster - https://github.com/iamceege/tooltipster (http://iamceege.github.io/tooltipster/)
+// Тултипы(всплывающие подсказки)
+// Подключаем Scripts
+// import 'babel-loader!tooltipster';
+//

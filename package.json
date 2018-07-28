@@ -78,6 +78,7 @@
     "readmore-js": "^2.1.0",
     "slick-carousel": "^1.8.1",
     "sticky-sidebar": "^3.3.1",
-    "texttailor.js": "https://github.com/jpntex/TextTailor.js/"
+    "texttailor.js": "https://github.com/jpntex/TextTailor.js/",
+    "tooltipster": "^4.2.6"
   }
 }
