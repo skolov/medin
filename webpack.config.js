@@ -84,7 +84,16 @@ module.exports = env => ({
       {
         test: /\.svg$/,
         include: ico,
-        use: ['svg-sprite-loader', 'svgo-loader']
+        use: ['svg-sprite-loader', {
+          loader: 'svgo-loader',
+          options: {
+            plugins: [{
+              removeAttrs: {
+                attrs: '(fill|stroke)'
+              }
+            }]
+          }
+        }]
       },
       {
         test: /\.pug$/,
