@@ -23,6 +23,10 @@ _Шаблон на основе webpack, pug, scss, es6, postcss для мног
 
 3.  Установить CSScomb плагин для редактора ([WebSite](http://csscomb.com)) - форматирует css код по установленным параметрам;
 
+4.  Подключить сабмодули гита
+    - git submodule init
+    - git submodule update
+
 ## Запуск
 
 1.  Клонируйте или [скачайте](http://git.sitesoft.ru/markup/frontend-template.git) проект:
