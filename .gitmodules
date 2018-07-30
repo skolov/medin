@@ -1,0 +1,3 @@
+[submodule "src/vendors/custom/svgmap"]
+	path = src/vendors/custom/svgmap
+	url = ssh://git@git.sitesoft.ru:2225/markup/svgmap.git
