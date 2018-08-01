@@ -15,19 +15,18 @@ html(lang="ru")
     meta(charset="utf-8")
     title #{title}
     include ../includes/meta.pug
+    link(href=`css/app.css?stamp=${stamp}` rel='stylesheet')
     // Уникальные стили только для этой страницы - начало
     block stylesPage
     // Уникальные стили только для этой страницы - конец
-    link(href=`css/app.css?stamp=${stamp}` rel='stylesheet')
-    script(src=`js/icons.js?stamp=${stamp}`)
   body
     block header
       include ../../blocks/header/template
     block content
     block footer
       include ../../blocks/footer/template
+    script(src=`js/app.js?stamp=${stamp}`)
     // Уникальные скрипты только для этой страницы - начало
     block scriptsPage
     // Уникальные скрипты только для этой страницы - конец
-    script(src=`js/app.js?stamp=${stamp}`)
 
