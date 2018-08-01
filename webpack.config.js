@@ -16,7 +16,7 @@ const ImageminPlugin = require('imagemin-webpack-plugin').default;
 
 const src = path.resolve(__dirname, 'src/');
 const dist = path.resolve(__dirname, 'dist/');
-const ico = path.resolve(src, 'ico/');
+const svgSprite = path.resolve(src, 'svg-sprite/');
 const upload = path.resolve(src, 'upload/');
 // const staticPath = path.resolve(src, 'static/');
 
@@ -35,7 +35,6 @@ module.exports = env => ({
   entry: {
     app: './',
     pages: './pages.js',
-    icons: './icons.js',
     fonts: './fonts.js'
   },
   output: {
@@ -46,7 +45,7 @@ module.exports = env => ({
     rules: [{
         test: /\.js$/,
         exclude: /node_modules/,
-        // loader: 'babel-loader'
+        loader: 'babel-loader'
       },
       {
         test: /\.s?css$/,
@@ -83,7 +82,7 @@ module.exports = env => ({
       },
       {
         test: /\.svg$/,
-        include: ico,
+        include: svgSprite,
         use: ['svg-sprite-loader', {
           loader: 'svgo-loader',
           options: {
@@ -146,7 +145,7 @@ module.exports = env => ({
       },
       {
         test: /\.(gif|png|jpe?g)$/,
-        exclude: [ico, upload],
+        exclude: [svgSprite, upload],
         use: [{
           loader: 'url-loader',
           options: {
@@ -160,7 +159,7 @@ module.exports = env => ({
       },
       {
         test: /\.svg$/,
-        exclude: [ico, upload],
+        exclude: [svgSprite, upload],
         use: [{
           // loader: 'svg-url-loader',
           loader: 'url-loader',
