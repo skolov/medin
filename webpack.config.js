@@ -208,7 +208,8 @@ module.exports = env => ({
     }),
     new webpack.ProvidePlugin({
       $: 'expose-loader?$!jquery',
-      jQuery: 'expose-loader?$!jquery'
+      jQuery: 'expose-loader?$!jquery',
+      'window.jQuery': 'expose-loader?$!jquery'
     }),
     // new CopyWebpackPlugin([{
     //   from: staticPath,
