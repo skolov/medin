@@ -136,7 +136,7 @@ module.exports = env => ({
         use: [{
           loader: 'url-loader',
           options: {
-            limit: 4096,
+            limit: 2048,
             fallback: 'file-loader',
             name: '[name].[ext]',
             context: '',
@@ -150,7 +150,7 @@ module.exports = env => ({
         use: [{
           loader: 'url-loader',
           options: {
-            limit: 4096,
+            limit: 2048,
             fallback: 'file-loader',
             name: '[name].[ext]',
             context: '',
@@ -165,7 +165,7 @@ module.exports = env => ({
           // loader: 'svg-url-loader',
           loader: 'url-loader',
           options: {
-            limit: 4096,
+            limit: 2048,
             fallback: 'file-loader',
             name: '[name].[ext]',
             context: '',
