@@ -1,0 +1,92 @@
+.jcf-select {
+  display: inline-block;
+  position: relative;
+  min-width: 150px;
+  height: 26px;
+  margin: 0 0 12px;
+  border: 1px solid $color_tapa_approx;
+  vertical-align: top;
+  background: $white;
+  select {
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .jcf-select-text {
+    display: block;
+    overflow: hidden;
+    margin: 0 35px 0 8px;
+    font-size: 13px;
+    line-height: 26px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: default;
+  }
+  .jcf-select-opener {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 26px;
+    text-align: center;
+    background: $color_silver_chalice_approx;
+  }
+  .jcf-select-drop {
+    position: absolute;
+    top: 100%;
+    left: -1px;
+    right: -1px;
+    z-index: 9999;
+    margin-top: 0;
+  }
+  .jcf-drop-flipped {
+    top: auto;
+    bottom: 100%;
+  }
+  &.jcf-compact-multiple {
+    max-width: 220px;
+    .jcf-select-opener:before {
+      content: "...";
+      display: inline-block;
+      padding-top: 2px;
+    }
+  }
+}
+
+.jcf-select-drop {
+  .jcf-select-drop-content {
+    border: 1px solid $red;
+  }
+  &.jcf-compact-multiple {
+    .jcf-hover {
+      background: none;
+    }
+    .jcf-selected {
+      color: $black;
+      background: $color_mercury_approx;
+      &:before {
+        content: "";
+        display: inline-block;
+        width: 8px;
+        height: 4px;
+        margin: -7px 5px 0 -3px;
+        border: 3px solid $color_tapa_approx;
+        border-width: 0 0 3px 3px; //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  .jcf-hover {
+    color: $black;
+    background: $color_mercury_approx;
+  }
+}
+
+body > .jcf-select-drop {
+  position: absolute;
+  z-index: 9999;
+  margin: -1px 0 0;
+  &.jcf-drop-flipped {
+    margin: 1px 0 0;
+  }
+}

@@ -5,7 +5,7 @@ const autoprefixer = require('autoprefixer');
 const package = require('./package.json');
 const globImporter = require('node-sass-glob-importer');
 const WebpackMessages = require('webpack-messages');
-// const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const IfPlugin = require('if-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -18,6 +18,7 @@ const src = path.resolve(__dirname, 'src/');
 const dist = path.resolve(__dirname, 'dist/');
 const svgSprite = path.resolve(src, 'svg-sprite/');
 const upload = path.resolve(src, 'upload/');
+const uploadDist = path.resolve(dist, 'upload');
 // const staticPath = path.resolve(src, 'static/');
 
 const pug = path.resolve(src, 'pug/');
@@ -171,17 +172,6 @@ module.exports = env => ({
             outputPath: 'img/'
           }
         }]
-      },
-      {
-        test: /\.(gif|png|jpe?g|svg)$/,
-        include: upload,
-        use: [{
-          loader: 'file-loader',
-          options: {
-            name: '[path][name].[ext]',
-            context: ''
-          }
-        }]
       }
     ]
   },
@@ -211,10 +201,10 @@ module.exports = env => ({
       jQuery: 'expose-loader?$!jquery',
       'window.jQuery': 'expose-loader?$!jquery'
     }),
-    // new CopyWebpackPlugin([{
-    //   from: staticPath,
-    //   to: dist
-    // }]),
+    new CopyWebpackPlugin([{
+      from: upload,
+      to: uploadDist
+    }]),
     new CleanWebpackPlugin(dist),
     new IfPlugin(
       env === 'server',

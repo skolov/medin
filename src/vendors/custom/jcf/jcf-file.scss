@@ -1,0 +1,39 @@
+.jcf-file {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  background: $white;
+  .jcf-real-element {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 200px;
+    margin: 0;
+    font-size: 200px;
+  }
+  .jcf-fake-input {
+    display: inline-block;
+    width: 125px;
+    height: 28px;
+    overflow: hidden;
+    padding: 0 8px;
+    border: 1px solid $color_tapa_approx;
+    font-size: 13px;
+    line-height: 28px;
+    vertical-align: top;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .jcf-upload-button {
+    display: inline-block;
+    height: 28px;
+    overflow: hidden;
+    margin: 0 0 0 -1px;
+    padding: 0 10px;
+    border: 1px solid $color_tapa_approx;
+    line-height: 28px;
+    vertical-align: top;
+    white-space: nowrap;
+  }
+}

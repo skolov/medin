@@ -2,6 +2,10 @@
 
 _Шаблон на основе webpack, pug, scss, es6, postcss для многостраничных приложений_
 
+## Фронтенд стенды проекта
+
+1.  Фамилия Имя - [Стенд](http://sitesoft.ru)
+
 ## Действия перед созданием нового проекта
 
 1.  Проверить дизайн на соответствие требованиям [Требования к макетам дизайна KSS](https://docs.google.com/document/d/1DrQdRloEhhvfxCblvDui9ENhLd6nLcTH1HaYMp0Z8fQ/edit?usp=sharing)
@@ -134,3 +138,5 @@ import 'slick-carousel/slick/slick-theme.scss';
 23. Flag-icon-css [GitHub](https://github.com/lipis/flag-icon-css), [Сайт](http://flag-icon-css.lip.is);
 24. Rangy [GitHub](https://github.com/timdown/rangy)
 25. Tooltipster [GitHub](https://github.com/iamceege/tooltipster), [Сайт](http://iamceege.github.io/tooltipster/);
+26. Tingle.js [GitHub](https://github.com/robinparisi/tingle), [Сайт](http://gijsroge.github.io/priority-nav.js/);
+27. PriorityNavigation.js [GitHub](https://github.com/gijsroge/priority-navigation), [Сайт](http://gijsroge.github.io/priority-nav.js/);

@@ -28,11 +28,18 @@
 // import 'dropzone/dist/basic.css';
 //
 // FancyBox - https://github.com/fancyapps/fancyBox (http://fancyapps.com/fancybox/)
-// Модалка
+// Модалка, галерея фото и видео
 // Подключаем Scripts
 // import 'babel-loader!fancybox';
 // Подключаем Styles
 // import 'fancybox/dist/css/jquery.fancybox.css';
+//
+// tingle.js - https://github.com/robinparisi/tingle (http://gijsroge.github.io/priority-nav.js/)
+// Модалка
+// Подключаем Scripts
+// import 'babel-loader!expose-loader?tingle!tingle.js';
+// Подключаем Styles
+// import './custom/tingle.js/tingle.scss';
 //
 // Highlightjs - https://github.com/isagalaev/highlight.js (http://highlightjs.readthedocs.io/en/latest/)
 // Подсветка синтаксиса
@@ -161,4 +168,11 @@
 // Тултипы(всплывающие подсказки)
 // Подключаем Scripts
 // import 'babel-loader!tooltipster';
+//
+// PriorityNavigation.js - https://github.com/gijsroge/priority-navigation (http://gijsroge.github.io/priority-nav.js/)
+// Адаптив меню
+// Подключаем Scripts
+// import 'babel-loader!expose-loader?priorityNav!priority-nav';
+// Подключаем Styles
+// import './custom/priority-nav/priority-nav.scss';
 //
