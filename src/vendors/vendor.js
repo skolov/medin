@@ -76,7 +76,7 @@
 // Подключаем Scripts
 // import 'babel-loader!devbridge-autocomplete';
 // Подключаем Styles
-// import 'devbridge-autocomplete/content/styles.css';
+// import 'import './custom/autocomplete/autocomplete.scss';';
 //
 // Masonry - https://github.com/desandro/masonry (https://masonry.desandro.com)
 // Умная сетка на js
