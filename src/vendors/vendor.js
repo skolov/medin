@@ -176,3 +176,10 @@
 // Подключаем Styles
 // import './custom/priority-nav/priority-nav.scss';
 //
+// Slideout.js - https://github.com/mango/slideout (https://slideout.js.org)
+// Боковое меню
+// Подключаем Scripts
+// import 'babel-loader!expose-loader?Slideout!slideout';
+// Подключаем Styles
+// import './custom/slideout-menu/slideout-menu.scss';
+//
