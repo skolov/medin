@@ -57,6 +57,7 @@
     "bootstrap": "^4.1.1",
     "devbridge-autocomplete": "https://github.com/devbridge/jQuery-Autocomplete",
     "dropzone": "^5.4.0",
+    "family.scss": "^1.0.8",
     "fancybox": "2.1.7",
     "flag-icon-css": "^3.0.0",
     "fontfaceobserver": "^2.0.13",
