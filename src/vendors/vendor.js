@@ -34,7 +34,7 @@
 // Подключаем Styles
 // import 'fancybox/dist/css/jquery.fancybox.css';
 //
-// tingle.js - https://github.com/robinparisi/tingle (http://gijsroge.github.io/priority-nav.js/)
+// tingle.js - https://github.com/robinparisi/tingle (https://robinparisi.github.io/tingle/)
 // Модалка
 // Подключаем Scripts
 // import 'babel-loader!expose-loader?tingle!tingle.js';

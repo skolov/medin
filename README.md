@@ -138,5 +138,5 @@ import 'slick-carousel/slick/slick-theme.scss';
 23. Flag-icon-css [GitHub](https://github.com/lipis/flag-icon-css), [Сайт](http://flag-icon-css.lip.is);
 24. Rangy [GitHub](https://github.com/timdown/rangy)
 25. Tooltipster [GitHub](https://github.com/iamceege/tooltipster), [Сайт](http://iamceege.github.io/tooltipster/);
-26. Tingle.js [GitHub](https://github.com/robinparisi/tingle), [Сайт](http://gijsroge.github.io/priority-nav.js/);
+26. Tingle.js [GitHub](https://github.com/robinparisi/tingle), [Сайт](https://robinparisi.github.io/tingle/);
 27. PriorityNavigation.js [GitHub](https://github.com/gijsroge/priority-navigation), [Сайт](http://gijsroge.github.io/priority-nav.js/);
