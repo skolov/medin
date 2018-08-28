@@ -124,7 +124,7 @@ import 'slick-carousel/slick/slick-theme.scss';
 9.  Perfect-scrollbar [GitHub](https://github.com/utatti/perfect-scrollbar), [Сайт](http://utatti.github.io/perfect-scrollbar/);
 10. Devbridge-autocomplete [GitHub](https://github.com/devbridge/jQuery-Autocomplete), [Сайт](https://www.devbridge.com/sourcery/components/jquery-autocomplete/);
 11. Masonry [GitHub](https://github.com/desandro/masonry), [Сайт](https://masonry.desandro.com);
-12. Mediaelementjs [GitHub](https://github.com/mediaelement/mediaelement), [Сайт](http://www.mediaelementjs.com);
+12. Plyr [GitHub](https://github.com/sampotts/plyr), [Сайт](https://plyr.io);
 13. OwlCarousel2 [GitHub](https://github.com/OwlCarousel2/OwlCarousel2), [Сайт](https://owlcarousel2.github.io/OwlCarousel2/);
 14. Slick [GitHub](https://github.com/kenwheeler/slick/), [Сайт](http://kenwheeler.github.io/slick);
 15. Tabulator [GitHub](https://github.com/olifolkerd/tabulator), [Сайт](http://tabulator.info);
