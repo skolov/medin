@@ -76,19 +76,19 @@
 // Подключаем Scripts
 // import 'babel-loader!devbridge-autocomplete';
 // Подключаем Styles
-// import 'import './custom/autocomplete/autocomplete.scss';';
+// import './custom/autocomplete/autocomplete.scss';
 //
 // Masonry - https://github.com/desandro/masonry (https://masonry.desandro.com)
 // Умная сетка на js
 // Подключаем Scripts
 // import 'babel-loader!masonry-layout';
 //
-// Mediaelementjs - https://github.com/mediaelement/mediaelement (http://www.mediaelementjs.com)
+// Plyr - https://github.com/sampotts/plyr (https://plyr.io)
 // Кастомная обертка для видео и аудио
 // Подключаем Scripts
-// import 'babel-loader!mediaelement';
+// import 'babel-loader!expose-loader?Plyr!plyr';
 // Подключаем Styles
-// import 'mediaelement/build/mediaelementplayer.css';
+// import './custom/plyr/plyr.scss';
 //
 // OwlCarousel2 - https://github.com/OwlCarousel2/OwlCarousel2 (https://owlcarousel2.github.io/OwlCarousel2/)
 // Слайдер - 1 вариант
