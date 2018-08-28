@@ -183,3 +183,8 @@
 // Подключаем Styles
 // import './custom/slideout-menu/slideout-menu.scss';
 //
+// Mousetrap - https://github.com/ccampbell/mousetrap (https://craig.is/killing/mice)
+// События сочетания клавиш
+// Подключаем Scripts
+// import 'babel-loader!expose-loader?Mousetrap!mousetrap';
+//

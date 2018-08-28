@@ -142,3 +142,4 @@ import 'slick-carousel/slick/slick-theme.scss';
 27. PriorityNavigation.js [GitHub](https://github.com/gijsroge/priority-navigation), [Сайт](http://gijsroge.github.io/priority-nav.js/);
 28. Family.scss [GitHub](https://github.com/LukyVj/family.scss), [Сайт](http://lukyvj.github.io/family.scss/);
 29. Slideout.js [GitHub](https://github.com/mango/slideout), [Сайт](https://slideout.js.org);
+30. Mousetrap [GitHub](https://github.com/ccampbell/mousetrap), [Сайт](https://craig.is/killing/mice);
