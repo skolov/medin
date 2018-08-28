@@ -188,3 +188,8 @@
 // Подключаем Scripts
 // import 'babel-loader!expose-loader?Mousetrap!mousetrap';
 //
+// Blazy - https://github.com/dinbror/blazy/ (http://dinbror.dk/blazy/)
+// Ленивая загрузка изображений и прочего
+// Подключаем Scripts
+// import 'babel-loader!expose-loader?Blazy!blazy';
+//
