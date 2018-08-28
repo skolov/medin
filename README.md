@@ -144,3 +144,4 @@ import 'slick-carousel/slick/slick-theme.scss';
 29. Slideout.js [GitHub](https://github.com/mango/slideout), [Сайт](https://slideout.js.org);
 30. Mousetrap [GitHub](https://github.com/ccampbell/mousetrap), [Сайт](https://craig.is/killing/mice);
 31. Blazy [GitHub](https://github.com/dinbror/blazy/), [Сайт](http://dinbror.dk/blazy/);
+32. Frappe Charts [GitHub](https://github.com/frappe/charts), [Сайт](https://frappe.io/charts);

@@ -193,3 +193,8 @@
 // Подключаем Scripts
 // import 'babel-loader!expose-loader?Blazy!blazy';
 //
+// Frappe Charts - https://github.com/frappe/charts (https://frappe.io/charts)
+// Графики
+// Подключаем Scripts
+// import 'babel-loader!expose-loader?Chart!frappe-charts';
+//
