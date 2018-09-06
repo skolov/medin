@@ -198,3 +198,15 @@
 // Подключаем Scripts
 // import 'babel-loader!expose-loader?Chart!frappe-charts';
 //
+// Vidage - https://github.com/dvLden/Vidage (https://dvlden.github.io/vidage/)
+// Видео на фон
+// Подключаем Scripts
+// import 'babel-loader!expose-loader?Vidage!vidage';
+// Подключаем Styles
+// import './custom/vidage/vidage.scss';
+//
+// Final Countdown - https://github.com/hilios/jQuery.countdown (http://hilios.github.io/jQuery.countdown/)
+// Обратный отсчет
+// Подключаем Scripts
+// import 'babel-loader!jquery-countdown';
+//
