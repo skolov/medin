@@ -15,3 +15,15 @@
     @content;
   }
 }
+
+@mixin media-lg-md {
+  @media (max-width: 1279px) and (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin media-md-sm {
+  @media (max-width: 1023px) and (min-width: 767px) {
+    @content;
+  }
+}

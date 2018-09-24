@@ -145,5 +145,5 @@ import 'slick-carousel/slick/slick-theme.scss';
 30. Mousetrap [GitHub](https://github.com/ccampbell/mousetrap), [Сайт](https://craig.is/killing/mice);
 31. Blazy [GitHub](https://github.com/dinbror/blazy/), [Сайт](http://dinbror.dk/blazy/);
 32. Frappe Charts [GitHub](https://github.com/frappe/charts), [Сайт](https://frappe.io/charts);
-33. Vidage [GitHub](https://github.com/dvLden/Vidage), [Сайт](https://dvlden.github.io/vidage/);
+33. Vide [GitHub](https://github.com/vodkabears/Vide), [Сайт](http://vodkabears.github.io/vide/);
 34. Final Countdown [GitHub](https://github.com/hilios/jQuery.countdown), [Сайт](http://hilios.github.io/jQuery.countdown/);
