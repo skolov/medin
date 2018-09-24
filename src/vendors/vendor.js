@@ -17,7 +17,7 @@
 // Подключаем Scripts
 // import 'babel-loader!air-datepicker';
 // Подключаем Styles
-// import './custom/air-datepicker/air-datepicker.scss';
+// import './custom/air-datepicker/main.scss';
 //
 // Dropzonejs - https://github.com/enyo/dropzone/ (http://www.dropzonejs.com)
 // Загрузка файла в форме
