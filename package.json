@@ -2,10 +2,11 @@
   "name": "KSS",
   "version": "1.0",
   "description": "Шаблон на основе webpack, pug, scss, es6, postcss для многостраничных приложений",
-  "license": "ISC",
+  "license": "MIT",
   "author": "Компания Сайтсофт",
   "scripts": {
-    "build": "webpack --mode production",
+    "prod-build": "webpack --mode production",
+    "dev-build": "webpack --mode development",
     "watch": "webpack --watch --mode development",
     "start": "webpack --watch --mode development --env server",
     "lint": "eslint ./src"
