@@ -50,13 +50,16 @@ _Шаблон на основе webpack, pug, scss, es6, postcss для мног
 ### Подключение изображений
 
 Пример:
+Для изображений из папки img
 
-```pug - для изображений из папки img
+```pug
 img(src=require('@/img/logo.png') alt='')
 .block(style=`background-image: url(${require('@/img/logo.png')})`)
 ```
 
-```pug - для изображений из папки static
+Для изображений из папки static
+
+```pug
 img(src='static/img/logo.png' alt='')
 .block(style='background-image: url("static/img/logo.png")')
 ```
