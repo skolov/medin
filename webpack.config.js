@@ -13,7 +13,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
-
+const imageminJpegRecompress = require('imagemin-jpeg-recompress');
 const src = path.resolve(__dirname, 'src/');
 const dist = path.resolve(__dirname, 'dist/');
 const svgSprite = path.resolve(src, 'svg-sprite/');
@@ -199,9 +199,7 @@ module.exports = env => ({
         parallel: true,
       }),
       new OptimizeCSSAssetsPlugin({}),
-      new ImageminPlugin({
-        test: /\.(gif|png|jpe?g)$/
-      })
+
     ]
   },
   plugins: [
@@ -217,6 +215,33 @@ module.exports = env => ({
       from: static,
       to: staticDist
     }]),
+    new ImageminPlugin({
+      test: /\.(gif|png|jpe?g)$/,
+      optipng: {
+        optimizationLevel: 3
+      },
+      gifsicle: {
+        interlaced: true,
+        optimizationLevel: 1
+      },
+      jpegtran: {
+        progressive: true
+      },
+      svgo: {},
+      pngquant: {
+        quality: "65-70",
+        speed: 5
+      },
+      plugins: [
+        imageminJpegRecompress({
+          loops: 3,
+          min: 65,
+          max: 70,
+          quality: "medium"
+        }),
+      ],
+      cacheFolder: path.resolve('./cacheImagemin')
+    }),
     new CleanWebpackPlugin(dist),
     new IfPlugin(
       env === 'server',

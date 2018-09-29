@@ -16,3 +16,4 @@ npm-debug.log
 yarn-error.log
 dist/js/pages.js
 dist/js/fonts.js
+cacheImagemin/*
