@@ -87,6 +87,7 @@
 // Кастомная обертка для видео и аудио
 // Подключаем Scripts
 // import 'babel-loader!expose-loader?Plyr!plyr';
+// import 'plyr/dist/plyr.polyfilled.js';
 // Подключаем Styles
 // import './custom/plyr/plyr.scss';
 //
