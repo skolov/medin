@@ -24,6 +24,18 @@ const uploadDist = path.resolve(dist, 'upload');
 const pug = path.resolve(src, 'pug/');
 const pugGlobals = path.resolve(pug, 'data/global.json');
 
+
+const pxtorem = require('postcss-pxtorem');
+const pxtoremOpts = {
+  rootValue: 16,
+  unitPrecision: 5,
+  propList: ["*", "!background-position"],
+  selectorBlackList: [],
+  replace: true,
+  mediaQuery: false,
+  minPixelValue: 0
+};
+
 module.exports = env => ({
   stats: 'none',
   context: src,
@@ -66,7 +78,7 @@ module.exports = env => ({
             loader: 'postcss-loader',
             options: {
               sourceMap: true,
-              plugins: [autoprefixer]
+              plugins: [autoprefixer, pxtorem(pxtoremOpts)]
             }
           },
           {
