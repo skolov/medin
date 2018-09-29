@@ -51,15 +51,20 @@ _Шаблон на основе webpack, pug, scss, es6, postcss для мног
 
 Пример:
 
-```pug
-img(src=require('@/upload/logo.png') alt='')
-.block(style=`background-image: url(${require('@/upload/logo.png')}); width: 300px;`)
+```pug - для изображений из папки img
+img(src=require('@/img/logo.png') alt='')
+.block(style=`background-image: url(${require('@/img/logo.png')})`)
+```
+
+```pug - для изображений из папки static
+img(src='static/img/logo.png' alt='')
+.block(style='background-image: url("static/img/logo.png")')
 ```
 
 Для сокращения можно использовать миксин pug/mixins/img.pug, пример:
 
 ```pug
-+img('upload/sample.jpg')(alt='image').some-class
++img('static/img/sample.jpg')(alt='image').some-class
 ```
 
 ### Подключение плагинов/библиотек
@@ -108,7 +113,7 @@ import 'slick-carousel/slick/slick-theme.scss';
 Для сокращения можно использовать миксин pug/mixins/img.pug, пример:
 
 ```pug
-+icon('your-icon-file-name')(width=193 height=40).your-class
++icon('your-icon-file-name', 193, 40).your-class
 ```
 
 ## Плагины/Библиотеки используемые в шаблоне
