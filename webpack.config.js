@@ -17,8 +17,8 @@ const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const src = path.resolve(__dirname, 'src/');
 const dist = path.resolve(__dirname, 'dist/');
 const svgSprite = path.resolve(src, 'svg-sprite/');
-const upload = path.resolve(src, 'upload/');
-const uploadDist = path.resolve(dist, 'upload');
+const static = path.resolve(src, 'static/');
+const staticDist = path.resolve(dist, 'static');
 // const staticPath = path.resolve(src, 'static/');
 
 const pug = path.resolve(src, 'pug/');
@@ -158,7 +158,7 @@ module.exports = env => ({
       },
       {
         test: /\.(gif|png|jpe?g)$/,
-        exclude: [svgSprite, upload],
+        exclude: [svgSprite, static],
         use: [{
           loader: 'url-loader',
           options: {
@@ -172,7 +172,7 @@ module.exports = env => ({
       },
       {
         test: /\.svg$/,
-        exclude: [svgSprite, upload],
+        exclude: [svgSprite, static],
         use: [{
           // loader: 'svg-url-loader',
           loader: 'url-loader',
@@ -214,8 +214,8 @@ module.exports = env => ({
       'window.jQuery': 'expose-loader?$!jquery'
     }),
     new CopyWebpackPlugin([{
-      from: upload,
-      to: uploadDist
+      from: static,
+      to: staticDist
     }]),
     new CleanWebpackPlugin(dist),
     new IfPlugin(
