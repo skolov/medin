@@ -15,7 +15,8 @@ html(lang="ru")
     meta(charset="utf-8")
     title #{title}
     include ../includes/meta.pug
-    link(href=`css/app.css?stamp=${stamp}` rel='stylesheet')
+    link(href=`css/vendors.css?stamp=${stamp}` rel='stylesheet')
+    link(href=`css/styles.css?stamp=${stamp}` rel='stylesheet')
     // Уникальные стили только для этой страницы - начало
     block stylesPage
     // Уникальные стили только для этой страницы - конец
@@ -25,7 +26,9 @@ html(lang="ru")
     block content
     block footer
       include ../../blocks/footer/template
-    script(src=`js/app.js?stamp=${stamp}`)
+    script(src=`js/vendors.js?stamp=${stamp}`)
+    script(src=`js/scripts.js?stamp=${stamp}`)
+
     // Уникальные скрипты только для этой страницы - начало
     block scriptsPage
     // Уникальные скрипты только для этой страницы - конец

@@ -1,5 +1,7 @@
 /* eslint-disable */
 //
+import 'babel-polyfill';
+//
 // Normalize - https://github.com/necolas/normalize.css/ (https://necolas.github.io/normalize.css/)
 // Приведение всех основных стилей под один формат
 // Подключаем Styles

@@ -14,6 +14,9 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const imageminJpegRecompress = require('imagemin-jpeg-recompress');
+const FixStyleOnlyEntriesPlugin = require("webpack-fix-style-only-entries");
+
+
 const src = path.resolve(__dirname, 'src/');
 const dist = path.resolve(__dirname, 'dist/');
 const svgSprite = path.resolve(src, 'svg-sprite/');
@@ -46,9 +49,11 @@ module.exports = env => ({
     }
   },
   entry: {
-    app: './',
-    pages: './pages.js',
-    fonts: './fonts.js'
+    scripts: './js/main.js',
+    styles: './scss/main.scss',
+    vendors: './vendors/vendor.js',
+    pages: './pug/pages.js',
+    fonts: './fonts/fonts.js'
   },
   output: {
     filename: './js/[name].js',
@@ -203,6 +208,9 @@ module.exports = env => ({
     ]
   },
   plugins: [
+    new FixStyleOnlyEntriesPlugin({
+      extensions: ['scss', 'styl', 'css']
+    }),
     new MiniCssExtractPlugin({
       filename: "./css/[name].css",
     }),
