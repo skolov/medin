@@ -22,7 +22,8 @@
     "standard"
   ],
   "settings": {
-    "import/resolver": "webpack"
+    "import/resolver": "webpack",
+    "import/ignore": [".scss$"]
   },
   "plugins": ["import", "promise", "compat", "node"],
   "env": {

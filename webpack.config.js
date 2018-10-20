@@ -11,10 +11,12 @@ const IfPlugin = require('if-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const imageminJpegRecompress = require('imagemin-jpeg-recompress');
 const FixStyleOnlyEntriesPlugin = require("webpack-fix-style-only-entries");
+const glob = require('glob');
+const PurifyCSSPlugin = require('purifycss-webpack');
+const TerserPlugin = require('terser-webpack-plugin');
 
 
 const src = path.resolve(__dirname, 'src/');
@@ -27,7 +29,19 @@ const staticDist = path.resolve(dist, 'static');
 const pug = path.resolve(src, 'pug/');
 const pugGlobals = path.resolve(pug, 'data/global.json');
 
-
+const StylelintPlugin = require('stylelint-webpack-plugin')
+const lintStylesOptions = {
+  context: path.resolve(__dirname, `${src}/scss`),
+  syntax: 'scss',
+  emitErrors: false
+  // fix: true,
+}
+const lintStylesOptionsBlocks = {
+  context: path.resolve(__dirname, `${src}/blocks`),
+  syntax: 'scss',
+  emitErrors: false
+  // fix: true,
+}
 const pxtorem = require('postcss-pxtorem');
 const pxtoremOpts = {
   rootValue: 16,
@@ -38,6 +52,19 @@ const pxtoremOpts = {
   mediaQuery: false,
   minPixelValue: 0
 };
+const lintJSOptions = {
+  emitWarning: true,
+  // Fail only on errors
+  failOnWarning: false,
+  failOnError: true,
+
+  // Toggle autofix
+  fix: true,
+  cache: true,
+
+  formatter: require('eslint-friendly-formatter')
+}
+
 
 module.exports = env => ({
   stats: 'none',
@@ -61,9 +88,16 @@ module.exports = env => ({
   },
   module: {
     rules: [{
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader'
+      test: /\.js$/,
+      exclude: /node_modules/,
+      use: [{
+            loader: 'babel-loader'
+          },
+          // {
+          //   loader: 'eslint-loader',
+          //   options: lintJSOptions
+          // }
+        ]
       },
       {
         test: /\.s?css$/,
@@ -194,8 +228,8 @@ module.exports = env => ({
   },
   optimization: {
     minimizer: [
-      new UglifyJsPlugin({
-        uglifyOptions: {
+      new TerserPlugin({
+        terserOptions: {
           output: {
             comments: false
           }
@@ -270,6 +304,12 @@ module.exports = env => ({
         injectCss: true
       })
     ),
+    new PurifyCSSPlugin({
+      paths: glob.sync(`${src}/**/*.+(pug|js)`, { nodir: true }),
+      styleExtensions: ['.css', '.scss']
+    }),
+    new StylelintPlugin(lintStylesOptionsBlocks),
+    // new StylelintPlugin(lintStylesOptions),
     new WebpackMessages({
       name: package.name,
       logger: str => console.log(`>> ${str}`)
