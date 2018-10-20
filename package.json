@@ -2,6 +2,7 @@
   "name": "KSS",
   "version": "1.0",
   "description": "Шаблон на основе webpack, pug, scss, es6, postcss для многостраничных приложений",
+  "main": "./src/js/main.js",
   "license": "MIT",
   "author": "Компания Сайтсофт",
   "scripts": {
@@ -11,6 +12,14 @@
     "start": "webpack --watch --mode development --env server",
     "lint": "eslint ./src"
   },
+  "keywords": [
+    "boilerplate",
+    "webpack",
+    "pug",
+    "scss",
+    "es6",
+    "postcss"
+  ],
   "devDependencies": {
     "autoprefixer": "^9.1.5",
     "babel-core": "^6.26.3",

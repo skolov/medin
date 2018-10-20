@@ -201,10 +201,16 @@ module.exports = env => ({
           }
         },
         cache: true,
-        parallel: true,
+        parallel: 4,
       }),
-      new OptimizeCSSAssetsPlugin({}),
-
+      new OptimizeCSSAssetsPlugin({
+        cssProcessorOptions: {
+          discardComments: {
+            removeAll: true
+          }
+        },
+        canPrint: true // false for analyzer
+      }),
     ]
   },
   plugins: [
@@ -224,7 +230,7 @@ module.exports = env => ({
       to: staticDist
     }]),
     new ImageminPlugin({
-      test: /\.(gif|png|jpe?g)$/,
+      test: /\.(gif|png|jpe?g|svg)$/,
       optipng: {
         optimizationLevel: 3
       },
@@ -237,7 +243,7 @@ module.exports = env => ({
       },
       svgo: {},
       pngquant: {
-        quality: "65-70",
+        quality: "65-80",
         speed: 5
       },
       plugins: [
