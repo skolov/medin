@@ -1,5 +1,6 @@
-import 'babel-polyfill';
+import '../vendors/vendors';
 import './other';
 import './helpers';
+
 
 $(function () {});
