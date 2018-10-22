@@ -76,9 +76,8 @@ module.exports = env => ({
     }
   },
   entry: {
-    scripts: './js/main.js',
+    app: './',
     styles: './scss/main.scss',
-    vendors: './vendors/vendor.js',
     pages: './pug/pages.js',
     fonts: './fonts/fonts.js'
   },
@@ -304,11 +303,11 @@ module.exports = env => ({
         injectCss: true
       })
     ),
-    new PurifyCSSPlugin({
-      paths: glob.sync(`${src}/**/*.+(pug|js)`, { nodir: true }),
-      styleExtensions: ['.css', '.scss']
-    }),
-    new StylelintPlugin(lintStylesOptionsBlocks),
+    // new PurifyCSSPlugin({
+    //   paths: glob.sync(`${src}/**/*.+(pug|js)`, { nodir: true }),
+    //   styleExtensions: ['.css', '.scss']
+    // }),
+    // new StylelintPlugin(lintStylesOptionsBlocks),
     // new StylelintPlugin(lintStylesOptions),
     new WebpackMessages({
       name: package.name,
