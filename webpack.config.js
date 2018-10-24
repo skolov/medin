@@ -76,7 +76,7 @@ module.exports = env => ({
     }
   },
   entry: {
-    app: './',
+    app: './js/main',
     styles: './scss/main.scss',
     pages: './pug/pages.js',
     fonts: './fonts/fonts.js'
@@ -87,9 +87,9 @@ module.exports = env => ({
   },
   module: {
     rules: [{
-      test: /\.js$/,
-      exclude: /node_modules/,
-      use: [{
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: [{
             loader: 'babel-loader'
           },
           // {

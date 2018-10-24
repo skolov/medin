@@ -4,7 +4,7 @@
 // Normalize - https://github.com/necolas/normalize.css/ (https://necolas.github.io/normalize.css/)
 // Приведение всех основных стилей под один формат
 // Подключаем Styles
-// import 'normalize.css/normalize.css';
+import 'normalize.css/normalize.css';
 //
 // Bootstrap - https://github.com/twbs/bootstrap (https://getbootstrap.com)
 // CSS фреймворк
