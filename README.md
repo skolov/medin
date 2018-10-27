@@ -39,7 +39,7 @@ _Шаблон на основе webpack, pug, scss, es6, postcss для мног
     - В консоле ввести: `rm -rf .git`
 4.  Установите зависимости с помощью yarn:
     - В консоле ввести: `yarn`;
-5.   Используйте одну из команд для сборки или запуска проекта:
+5.  Используйте одну из команд для сборки или запуска проекта:
     - `yarn prod-build` - сборка проекта для продакшена(минификация и оптимизация файлов);
     - `yarn dev-build` - сборка проекта для разработки(добавление sourcemaps);
     - `yarn watch` - сборка проекта для разработки, запуск слежения за файлами (добавление sourcemaps);
@@ -155,3 +155,4 @@ import 'slick-carousel/slick/slick-theme.scss';
 32. Frappe Charts [GitHub](https://github.com/frappe/charts), [Сайт](https://frappe.io/charts);
 33. Vide [GitHub](https://github.com/vodkabears/Vide), [Сайт](http://vodkabears.github.io/vide/);
 34. Final Countdown [GitHub](https://github.com/hilios/jQuery.countdown), [Сайт](http://hilios.github.io/jQuery.countdown/);
+35. Object-fit-images [GitHub](https://github.com/bfred-it/object-fit-images), [Сайт](http://bfred-it.github.io/object-fit-images/demo/);

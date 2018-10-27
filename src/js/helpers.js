@@ -1,5 +1,5 @@
 //Helper -- начало
-$.fn.windowSize = function windowSize(media) {
+$.fn.windowWidth = function windowWidth(media) {
   let sizeWidthWindow = $(window).outerWidth();
 
   switch (media) {
@@ -19,4 +19,16 @@ $.fn.windowSize = function windowSize(media) {
       return sizeWidthWindow
   }
 }
+
+$.fn.isApple = function isApple() {
+  return navigator.vendor && navigator.vendor.indexOf('Apple') >= 0;
+}
+
+
+
+$.fn.isIE = function isIE() {
+  return navigator.userAgent.search(/MSIE|Trident|Edge/) >= 0;
+}
+
+
 //Helper -- конец

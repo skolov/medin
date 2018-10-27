@@ -4,14 +4,14 @@
 // Normalize - https://github.com/necolas/normalize.css/ (https://necolas.github.io/normalize.css/)
 // Приведение всех основных стилей под один формат
 // Подключаем Styles
-import 'normalize.css/normalize.css';
+// import 'normalize.css/normalize.css';
 //
 // Bootstrap - https://github.com/twbs/bootstrap (https://getbootstrap.com)
 // CSS фреймворк
 // Подключаем Scripts
 // import 'babel-loader!bootstrap';
 // Подключаем Styles
-// import './custom/bootstrap/bootstrap.scss';
+import './custom/bootstrap/bootstrap.scss';
 //
 // Air-datepicker - https://github.com/t1m0n/air-datepicker (http://t1m0n.name/air-datepicker/docs/index-ru.html)
 // Датапикер
@@ -193,7 +193,9 @@ import 'normalize.css/normalize.css';
 // Blazy - https://github.com/dinbror/blazy/ (http://dinbror.dk/blazy/)
 // Ленивая загрузка изображений и прочего
 // Подключаем Scripts
-// import 'babel-loader!expose-loader?Blazy!blazy';
+import 'babel-loader!expose-loader?Blazy!blazy';
+// Подключаем Styles
+import './custom/b-lazy/b-lazy.scss';
 //
 // Frappe Charts - https://github.com/frappe/charts (https://frappe.io/charts)
 // Графики
@@ -209,4 +211,9 @@ import 'normalize.css/normalize.css';
 // Обратный отсчет
 // Подключаем Scripts
 // import 'babel-loader!jquery-countdown';
+//
+// object-fit-images - https://github.com/bfred-it/object-fit-images(http://bfred-it.github.io/object-fit-images/demo/)
+// Полифил object-fit
+// Подключаем Scripts
+import 'babel-loader!expose-loader?objectFitImages!object-fit-images';
 //
