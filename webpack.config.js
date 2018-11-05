@@ -76,8 +76,8 @@ module.exports = env => ({
     }
   },
   entry: {
-    app: './js/main',
-    styles: './scss/main.scss',
+    'app-js': './js/main',
+    'app-css': './scss/main.scss',
     pages: './pug/pages.js',
     fonts: './fonts/fonts.js'
   },
@@ -226,6 +226,15 @@ module.exports = env => ({
     ]
   },
   optimization: {
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules|custom[\\/]/,
+          name: 'vendors',
+          chunks: 'all'
+        }
+      }
+    },
     minimizer: [
       new TerserPlugin({
         terserOptions: {
@@ -247,9 +256,7 @@ module.exports = env => ({
     ]
   },
   plugins: [
-    new FixStyleOnlyEntriesPlugin({
-      extensions: ['scss', 'styl', 'css']
-    }),
+    new FixStyleOnlyEntriesPlugin(),
     new MiniCssExtractPlugin({
       filename: "./css/[name].css",
     }),
