@@ -2,3 +2,69 @@ extends ../layout/layout
 
 block variables
   - var title = 'UI-KIT';
+
+block header
+  +b.HEADER.UIheader
+    +e.top
+      +e.trigger
+        +e.trigger-link(href="#")
+          //+e.IMG(src='assets/img/UIright.svg')
+      +e.top-left
+        +b.UIlogo
+          +e.link(href='/')
+            +e.IMG(src='data:image/png;base64,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').pic
+
+      +e.top-right
+        +b.UInav
+          +e.item
+            +e.item-link(href="/design.html") WEB-принципы
+          +e.item.active
+            +e.item-link(href="/index.html") Сайты
+
+        //- +b.UIform-search
+        //-   form
+        //-     +e.wrap
+        //-       +e.input
+        //-         input(type='text')
+        //-       +e.btn
+        //-         button(type='submit').UIbtn.btn-icon
+        //-          +e.IMG(src='assets/img/UIsearch-icon.png').btn-pic
+
+      +e.burger
+        +b.UIburger-menu(href="#")
+          +e.icon
+    +e.bottom(style= "background-color: #1258A6")
+      +b.UItitle-line
+        +e.subtitle # 468
+        +e.main
+          h2 ГлавУпДК
+
+
+
+block content
+  +b.UIpage
+    +e.sidebar
+      +b.UIsidebar
+        +e.panel.e-scroll
+          +b.UIlist
+            +e.item.active
+              +e.item-link(href='javascript:void(0);') Компоненты
+            //- +e.item
+            //-   +e.item-link(href='#') Страницы
+
+        +e.slide.e-scroll
+          +b.UIlist.--state
+            +e.search
+              +b.UIinput-filter
+                form
+                  input(type='text' placeholder='Поиск')
+            +e.items
+              -
+                const components = [
+                ]
+
+              each component, index in components
+                +e.item(class= index == 0 ? "active" : "")
+                  +e.item-link(href=`${component}.html`)= component
+
+    +e.content

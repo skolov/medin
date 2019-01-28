@@ -1,7 +1,12 @@
 @import "~family.scss/source/src/family";
 
-@function rem ($px) {
-  @return $px / 16px+0rem;
+@function rem($number) {
+  @if $number==0 {
+    @return 0;
+  }
+  @else {
+    @return $number/16*1rem;
+  }
 }
 
 @function vw($target, $viewport: 1920) {
