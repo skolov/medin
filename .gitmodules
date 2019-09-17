@@ -1,3 +1,0 @@
-[submodule "src/vendors/custom/svgmap"]
-	path = src/vendors/custom/svgmap
-	url = http://git.sitesoft.ru/frontend-utils/svgmap.git
