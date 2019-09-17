@@ -1,0 +1,42 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Главная страница';
+  - var gosbar = false;
+
+
+block content
+  +b.MAIN.main 
+    .container
+      .row
+        .col-12.pt-8.pb-8
+          .col-12.mb-4
+            h1= title
+          .col-12.mb-4
+            component-vue(:title='titleText')
+          .col-12.mb-4
+            .row
+              .col-12
+                component-vue(:title='titleTextStore')
+              .col-12.mt-2
+                form(action="" @submit.prevent="")
+                  input(type="text" v-model='storeInput' placeholder="Новый текст стора" required)
+                  button(type='button' @click="newTextStore")
+                    |Отправить
+          .col-12
+            .row
+              .col-12
+                h2.m-0 Фейк данные (MOCK)
+              .col-12.mt-2
+                div(v-if='!personsload')
+                  |Загрузка списка...
+                ul
+                  li(v-for="(person, i) in persons" :key="person.id" )
+                    div id - {{person.id}}
+                    div
+                      img(v-bind:src='person.avatar')
+                    div Имя - {{person.name}}
+                    div Ник - {{person.username}}
+                    div Телефон - {{person.phone}}
+                    div Почта - {{person.email}}
+                    div О себе - {{person.about}}

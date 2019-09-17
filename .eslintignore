@@ -1,0 +1,6 @@
+
+build/**/*.js
+app/vendors/**/*
+app/static/**/*
+dist/
+dist-ui/
