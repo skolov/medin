@@ -84,12 +84,20 @@ module.exports = {
         ignorePropertyModificationsFor: ['state'],
       },
     ],
+    'unicorn/prevent-abbreviations': [
+      'error',
+      {
+        replacements: {
+          el: false,
+        },
+      },
+    ],
   },
   // settings: {
   //   'import/resolver': {
   //     webpack: {
-  //       config: './build/webpack.common.js'
-  //     }
-  //   }
-  // }
+  //       config: './build/webpack.common.js',
+  //     },
+  //   },
+  // },
 }

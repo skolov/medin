@@ -1,8 +1,8 @@
-import '@babel/polyfill';
+import '@babel/polyfill'
 
-import './blocks-app';
+import './blocks-app'
 
-import './app-main';
+import './app-main'
 
-import '../scss/main.scss';
-import './scripts-ui';
+import '../scss/main.scss'
+import './scripts-ui'

@@ -1,5 +1,6 @@
 
 build/**/*.js
+app-ui/**/*
 app/vendors/**/*
 app/static/**/*
 dist/

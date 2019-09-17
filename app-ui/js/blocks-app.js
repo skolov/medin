@@ -1,4 +1,4 @@
-const requireAll = r => r.keys().forEach(r);
+const requireAll = (r) => r.keys().forEach(r)
 
 // include blocks
-requireAll(require.context('../../app/blocks/', true, /ui-template\.pug$/));
+requireAll(require.context('../../app/blocks/', true, /ui-template\.pug$/))

@@ -1,10 +1,9 @@
 import Vue from 'vue'
-import store from '@store'
-import router from '@router'
+import ComponentVue from '../../../vue/components/component-vue/component-vue.vue'
+import store from '../../../vue/store'
+import router from '../../../vue/router'
 
-import ComponentVue from '@components/component-vue/component-vue.vue'
-
-import fetchList from '@/api/persons'
+import fetchList from '../../../api/persons'
 
 if (process.env.NODE_ENV !== 'production') {
   /* eslint-disable global-require */
@@ -13,7 +12,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 if (process.env.NODE_ENV !== 'production') {
   /* eslint-disable global-require */
-  require('@/mock')
+  require('../../../mock')
 }
 
 /* eslint-disable no-new */
@@ -39,18 +38,20 @@ new Vue({
     },
   },
   watch: {},
+  mounted() {},
+  created() {
+    // Данные с использованием MOCK
+    fetchList()
+      .then((response) => {
+        this.personsload = true
+        this.persons = response.data
+      })
+      .catch((error) => console.log(error))
+  },
   methods: {
     // Пример работы с AXIOS
     newTextStore() {
       this.$store.dispatch('newTextStore', this.storeInput)
     },
-  },
-  mounted() {},
-  created() {
-    // Данные с использованием MOCK
-    fetchList().then((response) => {
-      this.personsload = true
-      this.persons = response.data
-    })
   },
 })
