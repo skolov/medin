@@ -18,7 +18,7 @@ const parts = require('./webpack.parts')
 const pug = path.resolve(paths.app, 'pug/')
 const pugMain = path.resolve(paths.mainApp.app, 'pug/')
 const pugBlocks = path.resolve(paths.mainApp.app, 'blocks/')
-const pugGlobals = path.resolve(pug, 'data/global.json')
+const pugGlobals = path.resolve(pugMain, 'data/global.json')
 
 const pugOptions = {
   pretty: true,
@@ -42,19 +42,9 @@ module.exports = merge([
       symlinks: false,
       alias: {
         '@': path.resolve(path.dirname(__dirname), 'app'),
-        '@components': path.resolve(
-          path.dirname(__dirname),
-          'app',
-          'vue',
-          'components'
-        ),
+        '@components': path.resolve(path.dirname(__dirname), 'app', 'vue', 'components'),
         '@store': path.resolve(path.dirname(__dirname), 'app', 'vue', 'store'),
-        '@router': path.resolve(
-          path.dirname(__dirname),
-          'app',
-          'vue',
-          'router'
-        ),
+        '@router': path.resolve(path.dirname(__dirname), 'app', 'vue', 'router'),
         vue$: 'vue/dist/vue.esm.js',
       },
     },
@@ -84,7 +74,7 @@ module.exports = merge([
             from: path.join(path.dirname(__dirname), 'app/static'),
             to: `${paths.build}/static`,
           },
-        ])
+        ]),
       ),
       new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /ru|en/),
     ],
