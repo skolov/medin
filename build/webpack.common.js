@@ -56,10 +56,6 @@ module.exports = merge([
     },
     plugins: [
       new FriendlyErrorsPlugin(),
-      new webpack.ProvidePlugin({
-        $: 'expose-loader?$!jquery',
-        jQuery: 'expose-loader?jQuery!jquery',
-      }),
       new VueLoaderPlugin(),
       new CopyWebpackPlugin([
         {
