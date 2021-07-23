@@ -11,11 +11,11 @@
     "start": "nodemon --watch webpack.config.js --buildStatus project --exec \"webpack-dev-server --open --hot --env development\"",
     "build-ui": "webpack --env production --progress --buildStatus ui-kit",
     "start-ui": "nodemon --watch webpack.config.js --buildStatus ui-kit --exec \"webpack-dev-server --open --env development\"",
-    "code-format": "prettier --write app/**/*.{css,scss,js,vue}",
-    "lint:js": "eslint --ext .js --ext .vue ./app/ --fix",
-    "lint:js-debug": "eslint --ext .js --ext .vue ./app/",
-    "lint:style": "stylelint  ./app/**/*.css ./app/**/*.scss ./app/**/*.vue --fix",
-    "lint:style-debug": "stylelint ./app/**/*.css, ./app/**/*.scss, ./app/**/*.vue"
+    "code-format": "prettier --write app/**/*.{css,scss,js}",
+    "lint:js": "eslint --ext .js --ext ./app/ --fix",
+    "lint:js-debug": "eslint --ext .js --ext ./app/",
+    "lint:style": "stylelint  ./app/**/*.css ./app/**/*.scss --fix",
+    "lint:style-debug": "stylelint ./app/**/*.css, ./app/**/*.scss"
   },
   "keywords": [
     "boilerplate",
@@ -23,16 +23,13 @@
     "pug",
     "scss",
     "es6",
-    "postcss",
-    "vue"
+    "postcss"
   ],
   "devDependencies": {
     "@babel/cli": "7.1.2",
     "@babel/core": "7.1.2",
     "@babel/plugin-syntax-dynamic-import": "7.0.0",
     "@babel/preset-env": "7.1.0",
-    "@vue/eslint-config-prettier": "^5.0.0",
-    "@vue/eslint-config-standard": "^4.0.0",
     "autoprefixer": "^9.1.5",
     "babel-eslint": "^8.2.3",
     "babel-loader": "^8.0.4",
@@ -57,7 +54,6 @@
     "eslint-plugin-sonarjs": "^0.4.0",
     "eslint-plugin-standard": "^3.1.0",
     "eslint-plugin-unicorn": "^10.0.0",
-    "eslint-plugin-vue": "^5.2.3",
     "expose-loader": "^0.7.5",
     "extract-loader": "^3.1.0",
     "fast-sass-loader": "^1.4.7",
@@ -93,8 +89,6 @@
     "svgo-loader": "^2.2.0",
     "terser-webpack-plugin": "1.1.0",
     "url-loader": "^1.0.1",
-    "vue-loader": "^15.6.2",
-    "vue-template-compiler": "^2.6.6",
     "webpack": "^4.29.4",
     "webpack-bundle-analyzer": "^3.0.3",
     "webpack-cli": "^3.2.2",
@@ -104,12 +98,9 @@
     "webpack-stats-plugin": "0.2.1"
   },
   "dependencies": {
-    "axios-mock-adapter": "^1.16.0",
-    "faker": "^4.1.0",
     "@babel/polyfill": "^7.0.0",
     "@mdi/font": "^3.6.95",
     "air-datepicker": "^2.2.3",
-    "axios": "^0.18.0",
     "blazy": "^1.8.2",
     "bootstrap": "^4.1.1",
     "bulma": "^0.7.4",
@@ -152,10 +143,7 @@
     "tingle.js": "^0.15.1",
     "tippy.js": "^4.3.1",
     "tooltipster": "^4.2.6",
-    "vide": "^0.5.1",
-    "vue": "^2.6.6",
-    "vue-router": "^3.0.2",
-    "vuex": "^3.1.0"
+    "vide": "^0.5.1"
   },
   "husky": {
     "hooks": {
@@ -163,15 +151,15 @@
     }
   },
   "lint-staged": {
-    "*.(css|scss|js|vue)": [
+    "*.(css|scss|js)": [
       "yarn code-format",
       "git add"
     ],
-    "*.(js|vue)": [
+    "*.(js)": [
       "yarn lint:js",
       "git add"
     ],
-    "*.(css|scss|vue)": [
+    "*.(css|scss)": [
       "yarn lint:style",
       "git add"
     ]
