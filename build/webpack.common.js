@@ -5,7 +5,6 @@ const webpack = require('webpack')
 const merge = require('webpack-merge')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const IfPlugin = require('if-webpack-plugin')
 
 const minimist = require('minimist')
@@ -40,13 +39,6 @@ module.exports = merge([
     resolve: {
       unsafeCache: true,
       symlinks: false,
-      alias: {
-        '@': path.resolve(path.dirname(__dirname), 'app'),
-        '@components': path.resolve(path.dirname(__dirname), 'app', 'vue', 'components'),
-        '@store': path.resolve(path.dirname(__dirname), 'app', 'vue', 'store'),
-        '@router': path.resolve(path.dirname(__dirname), 'app', 'vue', 'router'),
-        vue$: 'vue/dist/vue.esm.js',
-      },
     },
 
     stats: {
@@ -56,7 +48,6 @@ module.exports = merge([
     },
     plugins: [
       new FriendlyErrorsPlugin(),
-      new VueLoaderPlugin(),
       new CopyWebpackPlugin([
         {
           from: `${paths.app}/static`,
@@ -92,7 +83,6 @@ module.exports = merge([
   parts.loadPlainPug({
     exclude: [pug, pugBlocks],
   }),
-  parts.loadVUE({}),
   parts.loadSvgIcons({
     include: [
       path.resolve(paths.app, 'svg-sprite/'),

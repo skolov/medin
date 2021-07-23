@@ -1,6 +1,5 @@
 module.exports = {
   extends: [
-    'plugin:vue/recommended',
     'airbnb-base',
     // 'standard',
     'plugin:import/errors',
@@ -10,10 +9,6 @@ module.exports = {
     'plugin:sonarjs/recommended',
     'plugin:unicorn/recommended',
     'plugin:prettier/recommended',
-    'prettier',
-    'prettier/standard',
-    'prettier/unicorn',
-    'prettier/vue',
   ],
 
   plugins: [

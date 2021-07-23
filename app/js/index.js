@@ -11,4 +11,3 @@ import './blocks'
 import '../svg-sprite'
 
 import '../scss/main.scss'
-import '../vue'
