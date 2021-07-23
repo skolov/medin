@@ -1,8 +1,7 @@
 $(() => {
   // Полифил для object-fit
   // eslint-disable-next-line no-undef
-  objectFitImages()
-
+  // objectFitImages()
   // Ленивая подгрузка, css класс .b-lazy
   // window.bLazy = new Blazy({
   //   offset: 300,
@@ -18,13 +17,10 @@ $(() => {
   //     }
   //   }
   // });
-
   // Картинки из черно-белых в цветные - начало
   // $('.gray-scale img').addClass('grayscale grayscale-fade')
-
   // // eslint-disable-next-line sonarjs/no-duplicate-string
   // $('.grayscale').gray()
-
   // $('.gray-scale').hover(
   //   function() {
   //     $(this)
