@@ -94,19 +94,6 @@ exports.loadPlainPug = ({ include, exclude }) => ({
   },
 })
 
-exports.loadVUE = ({ include, exclude }) => ({
-  module: {
-    rules: [
-      {
-        test: /\.vue$/,
-        include,
-        exclude,
-        loader: 'vue-loader',
-      },
-    ],
-  },
-})
-
 exports.loadSvgIcons = ({ include, exclude, options }) => ({
   module: {
     rules: [
