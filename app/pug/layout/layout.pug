@@ -20,13 +20,11 @@ html(lang="ru")
     block page-styles
 
   body
-    //noindex
-    .app#app
-      block header
-        include ../../blocks/header/template
-      block content
-      block footer
-        include ../../blocks/footer/template
+    block header
+      include ../../blocks/header/template  
+    block content
+    block footer
+      include ../../blocks/footer/template
     include ../includes/old-browsers
 
     include ../includes/common-medin-scripts
