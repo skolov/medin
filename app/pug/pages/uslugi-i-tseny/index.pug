@@ -1,0 +1,339 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Услуги и цены';
+  - var gosbar = false;
+
+block page-styles 
+
+block page-scripts
+
+block content
+
+  .maincontent
+    .container
+      .row
+        .col-sm-12
+          link(href='/bitrix/css/main/font-awesome.css?154090031728777' type='text/css' rel='stylesheet')
+          .bx-breadcrumb.breadcrumb(aria-label='breadcrumb' itemprop='http://schema.org/breadcrumb' itemscope='' itemtype='http://schema.org/BreadcrumbList')
+            #bx_breadcrumb_0.breadcrumb-item(itemprop='itemListElement' itemscope='' itemtype='http://schema.org/ListItem')
+              a(href='/' title='Главная' itemprop='url')
+                span(itemprop='name') Главная
+              meta(itemprop='position' content='1')
+            #bx_breadcrumb_1.breadcrumb-item(itemprop='itemListElement' itemscope='' itemtype='http://schema.org/ListItem')
+              a(href='/o-medintsentre/' title='О мединцентре' itemprop='url')
+                span(itemprop='name') О мединцентре
+              meta(itemprop='position' content='2')
+            #bx_breadcrumb_2.breadcrumb-item(itemprop='itemListElement' itemscope='' itemtype='http://schema.org/ListItem')
+              a(href='/o-medintsentre/uslugi-i-tseny/' title='Услуги и цены' itemprop='url')
+                span(itemprop='name') Услуги и цены
+              meta(itemprop='position' content='3')
+            .breadcrumb-item(itemprop='itemListElement' itemscope='' itemtype='http://schema.org/ListItem')
+              span(itemprop='name') Тарифы на платные медицинские и иные услуги
+              meta(itemprop='position' content='4')
+            div(style='clear:both')
+    .container
+      .row
+        .col-sm-12
+    section.bg-white
+      .container
+        .row
+          .col-12.pt-4
+            .row
+              .col-lg-8
+                .row
+                  .col-12
+                    .content
+                      | ТАРИФЫ на платные медицинские и иные услуги филиала  ГлавУпДК при МИД России "Мединцентр"
+    ul
+      a(href="javascript:clickOnSection('level_183');")
+        b   1.   ОБЩИЕ УСЛУГИ
+      br
+      ul.level_183(style='list-style-type: none; display: none;')
+        li.level_183(style='display: none;')
+          | 40103                А11.12.009                Кровь из вены                300
+        li.level_183(style='display: none;')
+          | 40101                А11.05.001                Кровь из пальца                150
+        li.level_183(style='display: none;')
+          | 40102                                Материал на бактериоскопию и посев                230
+    ul
+      a(href="javascript:clickOnSection('level_184');")
+        b   2.   АКУШЕРСТВО-ГИНЕКОЛОГИЯ
+      br
+      ul.level_184(style='list-style-type: none; display: none;')
+        li.level_184(style='display: none;')
+          | 10102                B01.001.002                Прием (осмотр, консультация) врача-акушера-гинеколога повторный                2800
+        li.level_184(style='display: none;')
+          | 10002                B01.001.001                Прием (осмотр, консультация) врача-акушера-гинеколога первичный                3000
+    ul
+      a(href="javascript:clickOnSection('level_185');")
+        b   3.   АЛЛЕРГОЛОГИЯ
+      br
+      ul.level_185(style='list-style-type: none; display: none;')
+        li.level_185(style='display: none;')
+          | 10048                B01.002.001                Прием (осмотр, консультация) врача-аллерголога-иммунолога первичный                3000
+        li.level_185(style='display: none;')
+          | 10148                B01.002.002                Прием (осмотр, консультация) врача-аллерголога-иммунолога повторный                2800
+        li.level_185(style='display: none;')
+          | 10448                B04.002.002                Профилактический прием (осмотр, консультация) врача-аллерголога-иммунолога                1270
+    ul
+      a(href="javascript:clickOnSection('level_186');")
+        b   4.   ОТОРИНОЛАРИНГОЛОГИЯ
+      br
+      ul.level_186(style='list-style-type: none; display: none;')
+        li.level_186(style='display: none;')
+          | 10016                B01.028.001                Прием (осмотр, консультация) врача-оториноларинголога первичный                3000
+        li.level_186(style='display: none;')
+          | 10116                B01.028.002                Прием (осмотр, консультация) врача-оториноларинголога повторный                2800
+        li.level_186(style='display: none;')
+          | 10416                B04.028.002                Профилактический прием (осмотр, консультация) врача-оториноларинголога                1270
+    ul
+      a(href="javascript:clickOnSection('level_187');")
+        b   5.   ФУНКЦИОНАЛЬНЫЕ ИССЛЕДОВАНИЯ БОЛЬНЫХ
+      br
+      ul.level_187(style='list-style-type: none; display: none;')
+        li.level_187(style='display: none;')
+          | 21001                A05.10.002                Проведение электрокардиографических исследований                1684
+        li.level_187(style='display: none;')
+          | 21002                А12.10.002                Электрокардиография с применением лекарственных препаратов                1546
+        li.level_187(style='display: none;')
+          | 21004                А12.10.001                Электрокардиография с физическими упражнениями                7192
+        ul
+          a(href="javascript:clickOnSection('level_291');")
+            b  5. 1.   ЭНДОСКОПИЧЕСКИЕ МЕТОДЫ ИССЛЕДОВАНИЯ И МАНИПУЛЯЦИИ
+          br
+          ul.level_291(style='list-style-type: none; display: none;')
+            li.level_291(style='display: none;')
+              | 31012                А16.16.052                Удаление полипа желудка эндоскопическое                16100
+            li.level_291(style='display: none;')
+              | 31010                A03.16.001                Эзофагогастродуоденоскопия                5784
+        ul
+          a(href="javascript:clickOnSection('level_292');")
+            b  5. 2.   УЛЬТРАЗВУКОВЫЕ ИССЛЕДОВАНИЯ И МАНИПУЛЯЦИИ
+          br
+          ul.level_292(style='list-style-type: none; display: none;')
+            li.level_292(style='display: none;')
+              | 22011                A04.26.002                Ультразвуковое исследование глазного яблока                1760
+            li.level_292(style='display: none;')
+              | 22016                А04.20.001.001                Ультразвуковое исследование матки и придатков трансвагинальное                5248
+        ul
+          a(href="javascript:clickOnSection('level_288');")
+            b  5. 3.   ЛАБОРАТОРНАЯ ДИАГНОСТИКА
+          br
+          ul.level_288(style='list-style-type: none; display: none;')
+            li.level_288(style='display: none;')
+              | 39201                                Общий (клинический анализ крови (определение 18 показателей , СОЭ)                420
+            li.level_288(style='display: none;')
+              | 39203                                Определение активированного частичного тромбопластинового времени ( АЧТВ)                320
+            ul
+              a(href="javascript:clickOnSection('level_389');")
+                b  5.3. 1.   БИОХИМИЧЕСКИЕ ИССЛЕДОВАНИЯ КРОВИ
+              br
+              ul.level_389(style='list-style-type: none; display: none;')
+                li.level_389(style='display: none;')
+                  | 40402                                Пероральный глюкозотолерантный тест                  594
+                li.level_389(style='display: none;')
+                  | 40401                                Пероральный глюкозотолерантный тест для беременных                594
+            ul
+              a(href="javascript:clickOnSection('level_390');")
+                b  5.3. 2.   ФИЗИКО-ХИМИЧЕСКИЕ ИССЛЕДОВАНИЯ КРОВИ
+              br
+              ul.level_390(style='list-style-type: none; display: none;')
+                li.level_390(style='display: none;')
+                  | 40302                                Кровь на время кровотечения                88
+                li.level_390(style='display: none;')
+                  | 40305                                Кровь на протромбиновое время                242
+    ul
+      a(href="javascript:clickOnSection('level_193');")
+        b   6.   Дерматовенерологическое отделение
+      br
+      ul.level_193(style='list-style-type: none; display: none;')
+        li.level_193(style='display: none;')
+          | 10415                B04.008.002                Профилактический прием (осмотр, консультация) врача-дерматовенеролога                1270
+        li.level_193(style='display: none;')
+          | 10015                B01.008.001                Прием (осмотр, консультация) врача-дерматовенеролога первичный                3000
+        li.level_193(style='display: none;')
+          | 10115                B01.008.002                Прием (осмотр, консультация) врача-дерматовенеролога повторный                2800
+        li.level_193(style='display: none;')
+          | 10017                B01.008.003                Прием (осмотр, консультация) врача-косметолога                3000
+        li.level_193(style='display: none;')
+          | 60751                                Процедуры в дерматовенерологическом кабинете                321
+        li.level_193(style='display: none;')
+          | 60752                                Удаление доброкачественных новообразований кожи с применением препарата  "Мардил цинк"                1694
+    ul
+      a(href="javascript:clickOnSection('level_194');")
+        b   7.   Неврологическое отделение
+      br
+      ul.level_194(style='list-style-type: none; display: none;')
+        li.level_194(style='display: none;')
+          | 10412                B04.023.002                Профилактический прием (осмотр, консультация) врача-невролога                1270
+        li.level_194(style='display: none;')
+          | 67101                А11.02.002.002                Блокада нижней косой мышцы головы                2500
+        li.level_194(style='display: none;')
+          | 10012                B01.023.001                Прием (осмотр, консультация) врача- невролога первичный                3000
+        li.level_194(style='display: none;')
+          | 10112                B01.023.002                Прием (осмотр, консультация) врача- невролога повторный                2800
+    ul
+      a(href="javascript:clickOnSection('level_195');")
+        b   8.   Физиотерапевтическое отделение
+      br
+      ul.level_195(style='list-style-type: none; display: none;')
+        li.level_195(style='display: none;')
+          | 10009                10009 B01.054.001                	Осмотр (консультация) врача-физиотерапевта                2769
+        li.level_195(style='display: none;')
+          | 80101                А17.30.016                Воздействие высокочастотными магнитными полями (индуктотермия)                857
+        li.level_195(style='display: none;')
+          | 10109                                Осмотр (консультация) врача-физиотерапевта повторный                2249
+    ul
+      a(href="javascript:clickOnSection('level_196');")
+        b   9.   Гинекологическое отделение
+      br
+      ul.level_196(style='list-style-type: none; display: none;')
+        li.level_196(style='display: none;')
+          | 10102                B01.001.002                Прием (осмотр, консультация) врача-акушера-гинеколога повторный                2800
+        li.level_196(style='display: none;')
+          | 10002                B01.001.001                Прием (осмотр, консультация) врача-акушера-гинеколога первичный                3000
+        li.level_196(style='display: none;')
+          | 62107                A11.20.002                 Получение цервикального мазка                      475
+        ul
+          a(href="javascript:clickOnSection('level_297');")
+            b  9. 1.   МАЛЫЕ ГИНЕКОЛОГИЧЕСКИЕ ОПЕРАТИВНЫЕ ВМЕШАТЕЛЬСТВА
+          br
+          ul.level_297(style='list-style-type: none; display: none;')
+            li.level_297(style='display: none;')
+              | 92101                                Вакуум-аспирация эндометрия                   2431
+        ul
+          a(href="javascript:clickOnSection('level_298');")
+            b  9. 2.   БОЛЬШИЕ ГИНЕКОЛОГИЧЕСКИЕ ОПЕРАЦИИ
+          br
+          ul.level_298(style='list-style-type: none; display: none;')
+            li.level_298(style='display: none;')
+              | 92129                                Лапаротомия радикальная гистерэктомия                113100
+            li.level_298(style='display: none;')
+              | 92154                                TVT-obturator (без стоимости расходных материалов)                42900
+    // 
+    // <section class="bg-white">
+    // <section class="container">
+    // <div class="row">
+    // <div class="col-12  'pb-6' ">
+    // <div class="row">
+    // <div class="col-12 mb-4">
+    // <div class="card-toggle">
+    // 
+    // <div class="content">
+    // <table>
+    // <thead>
+    // <tr>
+    // <th>
+    // <p>
+    // </p>
+    // </th>
+    // <th>
+    // <p>
+    // </p>
+    // </th>
+    // <th>
+    // <p>
+    // </p>
+    // </th>
+    // <th>
+    // <p>
+    // </p>
+    // </th>
+    // </tr>
+    // </thead>
+    // <tbody>
+    // 
+    // </tbody>
+    // </table>
+    // </div>
+    // 
+    // </div>
+    // </div>
+    // 
+    // </div>
+    // </div>
+    // </div>
+    // </section>
+    // 
+
+  .faq-area
+    form#form_co.jsFormValid(method='POST' action='/ajax/ajax.php')
+      input(type='hidden' value='Обратная связь' name='type_form')
+      .container
+        .row
+          .section-title-heading.label_tit.col-sm-12
+            .row
+              .col-sm-12
+                h2 Обратная связь
+              .col-sm-12
+                .line
+          .col-xl-12.col-md-12.col-lg-12.col-sm-12
+            .alert.alert-success.succes_nomer(role='alert')
+              | Спасибо заявка успешно принята — № 
+              span.nomer_z
+          .col-xl-12.col-md-12.col-lg-12.col-sm-12
+            .view-rout.p-f
+              .dropdown
+                button.rout-but.dropdown-toggle.view_otdel(data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                  | ВЫБЕРИТЕ НАПРАВЛЕНИЕ
+                input.hid_otdel(type='hidden' name='otdel')
+                .dropdown-menu.fac_drop(aria-labelledby='dropdownMenu2')
+                  button.dropdown-item.otdel(data-val='Гинекологическое отделение КДЦ' title='Гинекологическое отделение КДЦ') Гинекологическое отделение КДЦ
+                  button.dropdown-item.otdel(data-val='Гинекологическое отделение стационара' title='Гинекологическое отделение стационара') Гинекологическое отделение стационара
+                  button.dropdown-item.otdel(data-val='Дерматовенерологическое отделение КДЦ' title='Дерматовенерологическое отделение КДЦ') Дерматовенерологическое отделение КДЦ
+                  button.dropdown-item.otdel(data-val='Кабинет травматологии и ортопедии КДЦ' title='Кабинет травматологии и ортопедии КДЦ') Кабинет травматологии и ортопедии КДЦ
+                  button.dropdown-item.otdel(data-val='Кардиологическое отделение КДЦ' title='Кардиологическое отделение КДЦ') Кардиологическое отделение КДЦ
+                  button.dropdown-item.otdel(data-val='Неврологическое отделение КДЦ' title='Неврологическое отделение КДЦ') Неврологическое отделение КДЦ
+                  button.dropdown-item.otdel(data-val='Неврологическое отделение стационара' title='Неврологическое отделение стационара') Неврологическое отделение стационара
+                  button.dropdown-item.otdel(data-val='Отделение амбулаторного приема' title='Отделение амбулаторного приема') Отделение амбулаторного приема
+                  button.dropdown-item.otdel(data-val='Отделение анестезиологии-реанимации стационара' title='Отделение анестезиологии-реанимации стационара') Отделение анестезиологии-реанимации стационара
+                  button.dropdown-item.otdel(data-val='Отделение диагностики КДЦ' title='Отделение диагностики КДЦ') Отделение диагностики КДЦ
+                  button.dropdown-item.otdel(data-val='Отделение диагностики стационара' title='Отделение диагностики стационара') Отделение диагностики стационара
+                  button.dropdown-item.otdel(data-val='Отделение лечебной физкультуры КДЦ' title='Отделение лечебной физкультуры КДЦ') Отделение лечебной физкультуры КДЦ
+                  button.dropdown-item.otdel(data-val='Отделение педиатрии КДЦ' title='Отделение педиатрии КДЦ') Отделение педиатрии КДЦ
+                  button.dropdown-item.otdel(data-val='Отделение пластической хирургии' title='Отделение пластической хирургии') Отделение пластической хирургии
+                  button.dropdown-item.otdel(data-val='Отделение скорой медицинской и неотложной помощи' title='Отделение скорой медицинской и неотложной помощи') Отделение скорой медицинской и неотложной помощи
+                  button.dropdown-item.otdel(data-val='Отделение стоматологии КДЦ' title='Отделение стоматологии КДЦ') Отделение стоматологии КДЦ
+                  button.dropdown-item.otdel(data-val='Оториноларингологическое отделение КДЦ' title='Оториноларингологическое отделение КДЦ') Оториноларингологическое отделение КДЦ
+                  button.dropdown-item.otdel(data-val='Терапевтическое отделение КДЦ' title='Терапевтическое отделение КДЦ') Терапевтическое отделение КДЦ
+                  button.dropdown-item.otdel(data-val='Терапевтическое отделение стационара' title='Терапевтическое отделение стационара') Терапевтическое отделение стационара
+                  button.dropdown-item.otdel(data-val='Физиотерапевтическое отделение КДЦ' title='Физиотерапевтическое отделение КДЦ') Физиотерапевтическое отделение КДЦ
+                  button.dropdown-item.otdel(data-val='Хирургическое отделение КДЦ' title='Хирургическое отделение КДЦ') Хирургическое отделение КДЦ
+                  button.dropdown-item.otdel(data-val='Хирургическое отделение стационара' title='Хирургическое отделение стационара') Хирургическое отделение стационара
+                  button.dropdown-item.otdel(data-val='Эндокринологическое отделение КДЦ' title='Эндокринологическое отделение КДЦ') Эндокринологическое отделение КДЦ
+          .form-group.col-sm-4.form-g
+            label.p-f(for='inputEmail4') Фамилия Имя Отчество
+            input.form-control.form_border(type='text' name='fio' required='required')
+          .form-group.col-sm-4.form-g
+            label.p-f(for='inputPassword4') E-mail для ответа
+            input.form-control.form_border(type='text' name='email' required='required')
+          .form-group.col-sm-4.form-g
+            label.p-f(for='inputAddress') Телефон для связи
+            input#phone.form-control.form_border(type='text' name='phone' required='required')
+          .form-group.col-sm-12.form-g
+            label.p-f Текст Вашего вопроса и/или отзыва
+            textarea.form-control.form_border(rows='7' name='text' required='required')
+          .form-group.col-sm-6
+            .form-group.form-check
+              input#politika.form-check-input(type='checkbox' required='required')
+              label.form-check-label(for='politika' style=' line-height: 18px;')
+                | Я даю согласие на обработку персональных данных в соответствии с установленной 
+                a(href='/upload/document/Politika_v_otnoshenii_obrabotki_personalnykh.pdf\
+                ' target='_blank') Политикой конфиденциальности.
+            // <div class="count_text p-f"> Знаков     <span>0 / 2000</span></div>
+          .form-group.col-sm-3
+            .file-upload
+              label
+                input(type='file' name='file')
+                | 						Выберите файл
+            input#filename.filename(type='text' disabled='')
+          .col-12.mb-4.captcha-control
+            .field
+              input(type='hidden' name='captcha_sid' value='027d77ee5b2c1ed6951ad7ba63bad60d')
+              img(src='/bitrix/tools/captcha.php?captcha_sid=027d77ee5b2c1ed6951ad7ba63bad60d' width='140' height='30' alt='CAPTCHA')
+              input(type='text' name='captcha_word' size='30' maxlength='50' value='')
+          .form-group.col-sm-3
+            button#co_property_captcha.btn.btn-primary.btn-block.btn_send(type='submit' disabled='') ОТПРАВИТЬ
+
+  br
