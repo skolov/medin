@@ -33,3 +33,11 @@
     @content;
   }
 }
+
+// https://habr.com/ru/post/348502/
+/* stylelint-disable media-feature-name-no-unknown */
+@mixin media-has-mouse {
+  @media (hover), (min-width: 0\0), (min--moz-device-pixel-ratio: 0) {
+    @content;
+  }
+}
