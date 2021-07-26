@@ -58,13 +58,23 @@
 }
 
 @mixin placeholder {
+  &::placeholder {
+    @content;
+  }
+
   &::-webkit-input-placeholder {
     @content;
   }
+
+  &::-moz-placeholder {
+    @content;
+
+    opacity: 1;
+  }
+
   &:-moz-placeholder {
     @content;
-  }
-  &:-ms-input-placeholder {
-    @content;
+
+    opacity: 1;
   }
 }
