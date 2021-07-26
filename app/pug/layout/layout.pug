@@ -16,7 +16,8 @@ html(lang="ru")
     include ../includes/meta
     include ../includes/icons
 
-
+    include ../includes/common-medin-styles
+    block page-styles
 
   body
     //noindex
@@ -27,11 +28,14 @@ html(lang="ru")
       block footer
         include ../../blocks/footer/template
     include ../includes/old-browsers
-    include ../includes/scripts
+
+    include ../includes/common-medin-scripts
+    block page-scripts
+
     if exampleScripts
       // В файле example_###.js пример кода только для этой страницы
       // удалить файл при натяжке, код оберунть в тег script
-      block exampleScripts
+      block exampleScripts  
 
 
     include ../includes/gosbar
