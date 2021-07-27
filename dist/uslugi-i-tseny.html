@@ -1,0 +1,67 @@
+        <div class="row align-items-center">
+          <div class="col-sm-12">
+            <div class="section-title-heading-grey label_tit cursor">
+              <div class="row">
+                <div class="col-sm-9">
+                  <h2>Услуги и цены</h2>
+                </div>
+                <div class="col-md-3" style="text-align: right;">
+                  <div class="block-soc"><img src="http://medin.staging.sitesoft.ru/bitrix/templates/medin/img/share.png">
+                    <div class="box_link_soc"><a class="push facebook" onclick="Share.vkontakte('http://medin.staging.sitesoft.ru:80/','','','')"><img width="30" src="http://medin.staging.sitesoft.ru/bitrix/templates/medin/img/vk.png" alt=""></a><a class="push vkontakte" onclick="Share.facebook('http://medin.staging.sitesoft.ru:80','','','')"><img width="30" src="http://medin.staging.sitesoft.ru/bitrix/templates/medin/img/fb.png" alt=""></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12"> 
+            <div class="mt-4"> 
+              <div class="price-list" data-src-url="/tariffs-json.html">
+                <h1 class="price-list__title">Тариф* на платные медицинские и иные услуги филиала "Мединцентр" ГлавУпДК при МИД России
+                </h1>
+                <form class="price-list__search">
+                  <div class="search"><input class="search__input" placeholder="Поиск" name="query_services" type="text"/>
+                    <button class="search__btn" type="submit">Найти
+                    </button>
+                    <div class="search__icon-search"> 
+                      <svg class="svg-icon" width="24" height="24">
+                        <use xlink:href="#magnifier"></use>
+                      </svg>
+                    </div>
+                    <div class="search__btn-delete" tabindex="0"> 
+                      <svg class="svg-icon" width="12" height="12">
+                        <use xlink:href="#cross"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </form>
+                <div class="price-list__result">
+                </div>
+                <div class="price-list__preloader-wrap">
+                  <div class="price-list__preloader preloader">
+                  </div>
+                </div>
+                <div class="price-list__no-items" style="display:none">
+                  <p>К сожалению, услуга не найдена.</p>
+                  <p>
+                     Обратитесь за подробной информацией по номеру
+                    <a href="tel:+7(499) 283-93-63">+7(499) 283-93-63</a>
+                  </p>
+                </div>
+                <div class="price-list__ajax-fail" style="display:none">
+                  <p>Ошибка сервера. Попробуйте позже.</p>
+                </div>
+                <table class="price-list__table" style="display:none">
+                  <thead>
+                    <th>Код услуги</th>
+                    <th>Код НМУ</th>
+                    <th>Наименование услуги</th>
+                    <th>Цена услуги (руб) по тарифу Т</th>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
