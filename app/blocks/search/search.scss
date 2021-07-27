@@ -46,8 +46,14 @@
     text-align: center;
     cursor: pointer;
     background-color: #376ee3;
+    border: none;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
+    appearance: none;
+
+    &:focus {
+      outline: none;
+    }
   }
 
   &__btn-delete {
