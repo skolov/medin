@@ -60,4 +60,15 @@ module.exports = [
     // Подключаемые зависимости на страницу
     chunks: ['runtime', 'vendors', 'app', 'markup_uslugi_i_tseny'],
   }),
+  parts.page({
+    title: 'tariffs-json',
+    path: 'pages/tariffs-json',
+    entry: {
+      tariffs_json: path.join(paths.app, 'pug/pages/tariffs-json'),
+    },
+    template: path.join(paths.app, 'pug/pages/tariffs-json/index.pug'),
+
+    // Подключаемые зависимости на страницу
+    chunks: ['runtime', 'vendors', 'app', 'tariffs_json'],
+  }),
 ]
