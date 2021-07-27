@@ -129,7 +129,7 @@ class PriceList {
     )
   }
 
-  // eslint-disable-next-line sonarjs/cognitive-complexity
+  // eslint-disable-next-line sonarjs/cognitive-complexity, class-methods-use-this
   traverseTree(tree, nodeHandler = () => {}, leaveHandler = () => {}) {
     // обход по дереву элементов
     let current = tree
@@ -142,7 +142,7 @@ class PriceList {
         if (typeof current.NMU_CODE !== 'undefined') {
           leaveHandler(current)
           break
-        } else if (current !== this.filteredList) {
+        } else if (current !== tree) {
           nodeHandler(current)
         }
 
