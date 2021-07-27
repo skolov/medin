@@ -2,6 +2,7 @@ class PriceList {
   constructor(el) {
     this.$el = $(el)
     this.$searhForm = this.$el.find('.price-list__search')
+    this.$preloader = this.$el.find('.price-list__preloader')
 
     this.dataSourceUrl = this.$el.data('srcUrl')
     this.list = null
@@ -73,12 +74,14 @@ class PriceList {
       },
     )
 
+    this.$preloader.hide()
     this.$result.append($tableResults)
   }
 
   bindEvents() {
     this.$searhForm.on('submit', (event) => {
       event.preventDefault()
+      this.$preloader.show()
       const query = new FormData(this.$searhForm[0]).get('query_services')
       if (!query) {
         this.filteredList = this.list
