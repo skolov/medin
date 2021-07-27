@@ -57,7 +57,7 @@ class PriceList {
     this.traverseTree(
       this.filteredList,
       (node) => {
-        $tableResultsBody.append(`<tr>
+        $tableResultsBody.append(`<tr class="partial">
         <td></td>
         <td></td>
         <td>${node.NAME}</td>
