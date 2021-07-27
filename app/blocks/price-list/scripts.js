@@ -43,11 +43,13 @@ class PriceList {
 
     if (!this.ajaxSuccess) {
       this.$result.html(this.templateAjaxFail)
+      this.$preloader.hide()
       return
     }
 
     if (this.filteredList.length === 0) {
       this.$result.html(this.templateNoItems)
+      this.$preloader.hide()
       return
     }
 
