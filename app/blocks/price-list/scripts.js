@@ -127,7 +127,10 @@ class PriceList {
       this.list,
       () => {},
       (leave) => {
-        if (leave.NAME.toLowerCase().includes(query.toLowerCase())) {
+        if (
+          leave.NAME.toLowerCase().includes(query.toLowerCase()) &&
+          !this.filteredList.some((item) => item.SERVIES_CODE === leave.SERVIES_CODE)
+        ) {
           this.filteredList.push(leave)
         }
       },
