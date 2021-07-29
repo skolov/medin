@@ -84,7 +84,10 @@ class PriceList {
     this.$searhForm.on('submit', (event) => {
       event.preventDefault()
       this.$preloader.show()
-      const query = this.$searhForm.find('input[name="query_services"]').val()
+      const query = this.$searhForm
+        .find('input[name="query_services"]')
+        .val()
+        .trim()
       if (!query) {
         this.filteredList = this.list
         this.updateResult()
