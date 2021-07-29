@@ -106,7 +106,8 @@ class PriceList {
           $(data)
             .filter('.tariffs-json')
             .eq(0)
-            .html(),
+            .html()
+            .trim(),
         )[0]
         this.filteredList = JSON.parse(JSON.stringify(this.list))
         this.ajaxSuccess = true
