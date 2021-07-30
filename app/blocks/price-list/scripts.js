@@ -102,14 +102,8 @@ class PriceList {
     $.ajax(this.dataSourceUrl)
       .done((data) => {
         // eslint-disable-next-line prefer-destructuring
-        this.list = JSON.parse(
-          $(data)
-            .filter('.tariffs-json')
-            .eq(0)
-            .html()
-            .trim(),
-        )[0]
-        this.filteredList = JSON.parse(JSON.stringify(this.list))
+        this.list = data
+        this.filteredList = this.list
         this.ajaxSuccess = true
       })
       .fail((error) => {
