@@ -59,6 +59,7 @@ class PriceList {
     this.traverseTree(
       this.filteredList,
       (node) => {
+        if (!node.NAME) return
         $tableResultsBody.append(`<tr class="partial">
         <td></td>
         <td></td>
@@ -103,7 +104,7 @@ class PriceList {
       .done((data) => {
         // eslint-disable-next-line prefer-destructuring
         this.list = data
-        this.filteredList = this.list
+        this.filteredList = JSON.parse(JSON.stringify(this.list))
         this.ajaxSuccess = true
       })
       .fail((error) => {
@@ -149,6 +150,7 @@ class PriceList {
           nodeHandler(current)
         }
 
+        // получение дочерних листьев
         const elementsArray = []
         if (current.ELEMENTS) {
           current.ELEMENTS.forEach((item) => {
@@ -156,14 +158,12 @@ class PriceList {
           })
         }
 
+        // получение дочерних узлов
         const childrenArray = []
         if (current.CHILD) {
           // eslint-disable-next-line no-loop-func
           Object.keys(current.CHILD).forEach((key) => {
-            const childInner = current.CHILD[key]
-            Object.keys(childInner).forEach((innerKey) => {
-              childrenArray.push(childInner[innerKey])
-            })
+            childrenArray.push(current.CHILD[key])
           })
         } else {
           // eslint-disable-next-line no-loop-func
