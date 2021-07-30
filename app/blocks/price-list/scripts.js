@@ -100,11 +100,19 @@ class PriceList {
   }
 
   getData(callback) {
-    $.ajax(this.dataSourceUrl)
+    $.ajax({
+      method: 'GET',
+      url: this.dataSourceUrl,
+      dataType: 'json',
+    })
       .done((data) => {
-        // eslint-disable-next-line prefer-destructuring
-        this.list = data
-        this.filteredList = JSON.parse(JSON.stringify(this.list))
+        if (data) {
+          this.list = data
+          this.filteredList = JSON.parse(JSON.stringify(this.list))
+        } else {
+          this.list = []
+          this.filteredList = []
+        }
         this.ajaxSuccess = true
       })
       .fail((error) => {
