@@ -49,32 +49,57 @@ class PriceList {
       return
     }
 
-    const $tableResults = $(this.templateTable)
-    const $tableResultsBody = $tableResults.find('tbody')
+    const $rootNode = $(`<div class="node node--lvl-0">
+      <div class="node__inner">
+        <div class="node__items">
+          <table class="node__table"></table>
+        </div>
+        <div class="node__children"></div>
+      </div>
+    </div>`)
+    let $currentNode = $rootNode
+    let currentLevel = 0
 
     this.traverseTree(
       this.filteredList,
       (node) => {
         if (!node.NAME) return
-        $tableResultsBody.append(`<tr class="partial">
-        <td></td>
-        <td></td>
-        <td>${node.NAME}</td>
-        <td></td>
-      </tr>`)
+
+        const $node = $(`<div class="node node--lvl-${node.LEVEL}">
+          <div class="node__self">${node.NAME}</div>
+          <div class="node__inner">
+            <div class="node__items">
+              <table class="node__table"></table>
+            </div>
+            <div class="node__children"></div>
+          </div>
+        </div>`)
+
+        if (node.LEVEL > currentLevel) {
+          $currentNode.find(' > .node__inner > .node__children').append($node)
+        } else {
+          $currentNode
+            .closest(`.node--lvl-${node.LEVEL - 1}`)
+            .find(' > .node__inner > .node__children')
+            .append($node)
+        }
+
+        $node.wrap('<div class="node__child"></div>')
+        $currentNode = $node
+        currentLevel = node.LEVEL
       },
       (leave) => {
-        $tableResultsBody.append(`<tr>
-        <td>${leave.SERVIES_CODE}</td>
-        <td>${leave.NMU_CODE}</td>
-        <td>${leave.NAME}</td>
-        <td>${leave.PRICE}</td>
-      </tr>`)
+        $currentNode.find('.node__table').append(`<tr>
+          <td>${leave.SERVIES_CODE}</td>
+          <td>${leave.NMU_CODE}</td>
+          <td>${leave.NAME}</td>
+          <td>${leave.PRICE}</td>
+        </tr>`)
       },
     )
 
     this.$preloader.hide()
-    this.$result.append($tableResults)
+    this.$result.append($rootNode)
   }
 
   bindEvents() {
