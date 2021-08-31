@@ -17,10 +17,6 @@ class PriceList {
       .find('.price-list__no-items')
       .remove()
       .removeAttr('style')[0].outerHTML
-    this.templateTable = this.$el
-      .find('.price-list__table')
-      .remove()
-      .removeAttr('style')[0].outerHTML
 
     this.ajaxSuccess = null
 
