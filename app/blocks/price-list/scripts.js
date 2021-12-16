@@ -3,10 +3,13 @@ class PriceList {
     this.$el = $(el)
     this.$searhForm = this.$el.find('.price-list__search')
     this.$preloader = this.$el.find('.price-list__preloader')
+    this.$buttonDelete = this.$el.find('.search__btn-delete')
 
     this.dataSourceUrl = this.$el.data('srcUrl')
     this.list = null
     this.filteredList = null
+    this.defaultUrl = this.dataSourceUrl
+    this.searched = false
 
     this.$result = this.$el.find('.price-list__result')
     this.templateAjaxFail = this.$el
@@ -49,6 +52,12 @@ class PriceList {
       return
     }
 
+    if (this.list[0].length === 0) {
+      this.$result.html(this.templateNoItems)
+      this.$preloader.hide()
+      return
+    }
+
     const $rootNode = $(`<div class="node node--lvl-0">
       <div class="node__inner">
         <div class="node__items">
@@ -67,7 +76,7 @@ class PriceList {
 
         const $node = $(`<div class="node node--lvl-${node.LEVEL}">
           <div class="node__self">${node.NAME}</div>
-          <div class="node__inner">
+          <div class="node__inner"  style="display: ${this.searched ? 'block' : 'none'}">
             <div class="node__items">
               <table class="node__table"></table>
             </div>
@@ -110,13 +119,24 @@ class PriceList {
         .find('input[name="query_services"]')
         .val()
         .trim()
+
       if (!query) {
         this.filteredList = this.list
-        this.updateResult()
+        this.dataSourceUrl = this.defaultUrl
+        this.getData(this.updateResult.bind(this))
       } else {
-        this.filterServicesByQuery(query)
-        this.updateResult()
+        // this.updateResult() // Before searching on the back
+        this.searched = true
+        this.dataSourceUrl = `${this.defaultUrl}&q=${query}`
+        this.getData(this.updateResult.bind(this))
+        // this.filterServicesByQuery(query)
       }
+    })
+
+    this.$buttonDelete.on('click', () => {
+      this.dataSourceUrl = this.defaultUrl
+      this.searched = false
+      this.getData(this.updateResult.bind(this))
     })
   }
 
