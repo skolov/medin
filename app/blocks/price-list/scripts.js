@@ -76,6 +76,7 @@ class PriceList {
 
         const $node = $(`<div class="node node--lvl-${node.LEVEL}">
           <div class="node__self">${node.NAME}</div>
+          <div class="node__description">${node.DESCRIPTION || ''}</div>
           <div class="node__inner"  style="display: ${this.searched ? 'block' : 'none'}">
             <div class="node__items">
               <table class="node__table"></table>
@@ -101,7 +102,7 @@ class PriceList {
         $currentNode.find('.node__table').append(`<tr>
           <td>${leave.SERVIES_CODE}</td>
           <td>${leave.NMU_CODE}</td>
-          <td>${leave.NAME}</td>
+          <td><b>${leave.NAME}</b></td>
           <td>${leave.PRICE}</td>
         </tr>`)
       },
