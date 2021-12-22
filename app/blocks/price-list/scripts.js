@@ -188,12 +188,11 @@ class PriceList {
     // обход по дереву элементов
     let current = tree
     const memory = [current]
-
     /* eslint-disable no-loops/no-loops */
     /* eslint-disable-next-line no-cond-assign */
     while ((current = memory.pop())) {
       while (true) {
-        if (typeof current.NMU_CODE !== 'undefined') {
+        if (current && typeof current.NMU_CODE !== 'undefined') {
           leaveHandler(current)
           break
         } else if (current !== tree) {
